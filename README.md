@@ -8,7 +8,7 @@ Primeiro você deve clonar o repo na sua maquina usando a chave ssh
 
 Abra seu terminal e use: 
 
-### Git Clone `chave ssh´
+### `Git Clone `chave ssh´`
 
 Assim que clonar o projeto você deve dar um yarn para baixar as dependencias necessarias
 
