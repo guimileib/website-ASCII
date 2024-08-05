@@ -1,0 +1,37 @@
+.presentation-wrapper{
+    display: flex;
+    gap: 10%;
+    justify-content: space-between;
+    padding: 12vw 15% 0 15%;
+}   
+
+.presentation-text {
+    width: 50%;
+    z-index: 1;
+
+    h2 {
+        color: var(--blue-dark);
+        font-family: 'Montserrat Alternates';
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 50px;
+        text-align: left;
+        margin: 1em 0;
+    }
+
+    p {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    span {
+        color: var(--blue-light);
+    }
+}
+
+.computer {
+    height: 30vw;
+    z-index: 2;
+}

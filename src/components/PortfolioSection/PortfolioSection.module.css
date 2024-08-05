@@ -1,0 +1,44 @@
+.call_to_action{
+    display:flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 12%;
+
+    button {
+        border: none;
+        border-radius: 6px;
+        background-color: var(--green);
+        margin: 1rem auto;
+        display: block;
+        font-weight: 600;
+        font-size: 1.05rem;
+        padding: 1rem 2rem;
+    }
+
+    button:hover {
+        background-color: #2cc832; /* Cor ao passar o mouse */
+    }
+    
+    button:active {
+        background-color: #449648; /* Cor ao clicar no botão */
+        transform: translateY(2px); /* Adiciona um efeito de "pressionamento" */
+    }
+    
+}
+
+.services_image{
+    height: 20vw;
+    max-height: 400px;
+    width: auto;
+}
+
+.text{
+    text-align: center;
+    color: var(--blue-dark);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
