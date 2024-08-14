@@ -1,0 +1,31 @@
+.portfolio {
+    padding: 0 12%;
+    margin-top: 2rem;
+}
+
+.titles {
+    left: 8%;
+    z-index: 2;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        left: 5%;
+    }
+
+    img {
+        height: 2.3rem;
+    }
+
+    span {
+        font-weight: 800;
+    }
+}
+
+.projects_wrapper {
+    margin: 4rem 0;
+}
