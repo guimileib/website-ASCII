@@ -1,0 +1,67 @@
+.presentation-wrapper{
+    display: flex;
+    gap: 10%;
+    justify-content: space-between;
+    padding: 12vw 15% 0 15%;
+
+    background-image: url("image/esfumacado.png");
+    background-repeat: no-repeat;
+}   
+
+.presentation-text {
+    width: 50%;
+    z-index: 1;
+
+    h2 {
+        color: var(--blue-dark);
+        font-family: 'Montserrat Alternates';
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 50px;
+        text-align: left;
+        margin: 1em 0;
+    }
+
+    p {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    span {
+        color: var(--blue-light);
+    }
+}
+
+.computer {
+    height: 30vw;
+    z-index: 0;
+}
+
+@media screen and (max-width: 950px) {
+    .presentation-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }   
+
+    .presentation-text {
+        width: 100%;
+        z-index: 1;
+        text-align: center;
+
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+        }
+    }
+
+    .computer {
+        margin: 5rem auto 0 auto;
+        height: 40vw;
+    }
+    
+    .shadow {
+        height: 60%;
+    }
+}
