@@ -1,0 +1,21 @@
+.logos {
+    padding: 0 12%;
+    margin: 6rem 0;
+}
+
+.logos_wrapper{
+    margin: 2rem 0;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.images {
+    height: 2.5vw;
+    min-height: 30px;
+    max-height: 65px;
+    width: auto;
+}
+

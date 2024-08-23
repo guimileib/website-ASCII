@@ -1,0 +1,72 @@
+.title {
+    left: 8%;
+    z-index: 2;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        left: 5%;
+        text-align: left;
+    }
+
+    img {
+        height: 2.3rem;
+    }
+
+    span {
+        font-weight: 800;
+    }
+}
+
+.project_card {
+    box-sizing: border-box;
+    width: 400px ;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #b8b8b8;
+    padding-bottom: 1rem;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    button {
+        padding: 0.7rem 1rem;
+        color: black;
+        background-color: var(--silver);
+        border: none;
+        border-radius: 6px;
+        margin: 1rem 0 0 50%;
+    }
+
+    button:hover {
+        color: white;
+        background-color: var(--green);
+        border: none;
+    }
+}
+
+.project_text {
+    padding: 0 2rem;
+
+    h4 {
+        font-size: 20px;
+        color: var(--blue-light);
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+button .off {
+    display: none;
+}

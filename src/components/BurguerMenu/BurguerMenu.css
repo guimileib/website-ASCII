@@ -1,0 +1,70 @@
+.menuContainer {
+    position: absolute;
+    display: flex;
+    padding: 1rem;
+    width: 100vw;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.icon {
+    height: 44px;
+    cursor: pointer;
+    left: 1%;
+    margin: 1rem;
+    z-index: 2;
+}
+
+.menuHamburguer .list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--blue-dark);
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.list .listItems li {
+    font-size: 1.3rem;
+    margin: 1.5rem; 
+    cursor: pointer;
+
+    a {
+        color: white;
+    }
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../../image/menu-open.svg");
+    padding: 0.5rem;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+}
+
+.icon.iconActive {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../../image/menu-close.svg");
+}
+
+.menu.menuOpen {
+    width: 100vw;
+    box-shadow: 10px -2px black
+}
+
+.menu.menuClose {
+    display: none;
+}
+
+@media screen and (min-width: 890px) {
+    .menuHamburguer {
+        display: none;
+    }
+}
