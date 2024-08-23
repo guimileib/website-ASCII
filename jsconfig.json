@@ -1,4 +1,4 @@
 {
     "compilerOptions": { "baseUrl": "src" },
-    "include": ["src", "public/Footer"]
+    "include": ["src", "src/components/Footer"]
 }  
