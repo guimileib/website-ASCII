@@ -6,7 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 import './reset.css';
 
 import Home from 'pags/Home.js'
-import Footer from 'components/footer/Footer.js';
+import Footer from 'components/Footer/Footer.js';
 import Portfolio from 'pags/Portfolio.js';
 import AboutUs from 'pags/AboutUs.js';
 
