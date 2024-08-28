@@ -3,6 +3,8 @@ import TitleBanner from 'components/TitleBanner/TitleBanner.js';
 import Projects from 'components/portfolio/Projects.js';
 
 function Portfolio() {
+  window.scrollTo(0, 0)
+  
   return (
     <>
       <Header theme='dark'/>
