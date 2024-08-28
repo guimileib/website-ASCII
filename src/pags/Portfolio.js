@@ -4,10 +4,9 @@ import Projects from 'components/portfolio/Projects.js';
 
 function Portfolio() {
   window.scrollTo(0, 0)
-  
   return (
     <>
-      <Header theme='dark'/>
+      <Header theme='dark' />
       <TitleBanner title='Nosso Portfolio' image=''/>
        <Projects />
     </>

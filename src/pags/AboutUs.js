@@ -4,6 +4,7 @@ import AboutUsImg from "image/quem-somos.png"
 import Header from "components/Header/Header.js";
 
 export default function AboutUs() {
+    window.scrollTo(0, 0)
     return (
         <>  
             <Header theme="dark"/>

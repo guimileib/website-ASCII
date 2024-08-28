@@ -4,7 +4,7 @@ import './Mvv.css';
 import missionIcon from "image/mission.svg"
 import visionIcon from "image/vision.svg"
 import valuesIcon from "image/values.svg"
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 function Mvv(){
     return (
         <section className='mvv'>
@@ -25,7 +25,7 @@ function Mvv(){
                     <p>Inovação, Colaboração e Comprometimento. </p>
                 </div>
             </div>
-            <HashLink to="/sobre/#"><button>Conheça mais sobre Nós</button></HashLink>
+            <Link to="/sobre"><button>Conheça mais sobre Nós</button></Link>
         </section>        
     );
 }
