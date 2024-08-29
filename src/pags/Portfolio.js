@@ -4,11 +4,11 @@ import Projects from 'components/portfolio/Projects.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 
 function Portfolio() {
-  window.scrollTo(0, 0)
   return (
     <>
+      <div id="portfolio-anchor"></div>
       <BurguerMenu theme='light'/>
-      <Header theme='dark' />
+      <Header theme='dark'/>
       <TitleBanner title='Nosso Portfolio' image=''/>
        <Projects />
     </>

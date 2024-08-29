@@ -7,6 +7,7 @@ import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 export default function AboutUs() {
     return (
         <>  
+            <div id="sobre-anchor"></div>
             <BurguerMenu theme="light"/>
             <Header theme="dark"/>
             <Banner title="Sobre Nós" id="about-us__banner-img" image={AboutUsImg}/>

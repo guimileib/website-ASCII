@@ -9,7 +9,7 @@ function PortfolioSection() {
             <img className={styles.services_image} src={photo} alt="services_image" />
             <div>
                 <h2 className={styles.text}>Saiba como a ASCII pode<br></br>ajudar o <span>seu negócio</span>!</h2>
-                <Link to="/portfolio"><button>Visite nosso portfólio </button></Link>
+                <Link to="/portfolio/#portfolio-anchor"><button>Visite nosso portfólio </button></Link>
             </div>
         </section>
     )

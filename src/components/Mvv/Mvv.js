@@ -25,7 +25,7 @@ function Mvv(){
                     <p>Inovação, Colaboração e Comprometimento. </p>
                 </div>
             </div>
-            <Link to="/sobre"><button>Conheça mais sobre Nós</button></Link>
+            <Link to="/sobre/#sobre-anchor"><button>Conheça mais sobre Nós</button></Link>
         </section>        
     );
 }
