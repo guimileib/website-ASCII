@@ -48,10 +48,15 @@
     background-repeat: no-repeat;
 }
 
+
 .icon.iconActive {
     width: 2rem;
     height: 2rem;
     background-image: url("../../image/menu-close.svg");
+}
+
+.light.icon {
+    background-image: url("../../image/menu-open-light.svg");
 }
 
 .menu.menuOpen {
