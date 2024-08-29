@@ -5,7 +5,7 @@ import Logos from 'components/Logos/Logos.js';
 import OurServices from 'components/OurServices/OurServices.js';
 import Mvv from 'components/Mvv/Mvv.js';
 import Contact from 'components/Contact/Contact.js';
-import BurguerMenu from 'components/BurguerMenu/BurguerMenu';
+import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 
 function Home() {
   return (

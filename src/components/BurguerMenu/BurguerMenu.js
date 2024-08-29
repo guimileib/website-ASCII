@@ -1,5 +1,5 @@
-import { HashLink } from "react-router-hash-link";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./BurguerMenu.css"
 import logo from 'image/logo.png'
@@ -13,17 +13,17 @@ export default function BurguerMenu(props) {
     return(
         <div className={'menuHamburguer'}>
             <div className="menuContainer">
-                <HashLink to="/#"><img className='logoheader' src={logo} alt="logo" id="logo-header"/></HashLink>
+                <Link path="/"><img className='logoheader' src={logo} alt="logo" id="logo-header"/></Link>
                 <div className={active ? 'icon iconActive' : `${props.theme} icon`} onClick={ToggleMode}>
                 </div>
             </div>
             <div className={active ? 'menu menuOpen' : "menu menuClose"}>
                 <div className="list">
                     <ul className="listItems">
-                        <li><HashLink to="/">Home</HashLink></li>
-                        <li><HashLink to="/sobre/#">Sobre Nós</HashLink></li>
-                        <li><HashLink to="/#agendar-reuniao">Contato</HashLink></li>
-                        <li><HashLink to="/portfolio/#">Portfolio</HashLink></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/sobre/#">Sobre Nós</Link></li>
+                        <li><Link to="/#agendar-reuniao">Contato</Link></li>
+                        <li><Link to="/portfolio/#">Portfolio</Link></li>
                     </ul>
                 </div>
             </div>    
