@@ -58,7 +58,7 @@ export default function AboutUs() {
                 <div className="social-media__wrapper">
                     <div className="social-media__container">
                         <img src={linkedinLogo} alt="Linkedin"></img>
-                        <a target="_blank" href="https://www.linkedin.com/in/asciiejr">ASCII Empresa Junior</a>
+                        <a target="_blank" href="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/">ASCII Empresa Junior</a>
                     </div>
                     
                     <div className="social-media__container">
