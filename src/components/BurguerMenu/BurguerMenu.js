@@ -13,7 +13,7 @@ export default function BurguerMenu(props) {
     return(
         <div className={'menuHamburguer'}>
             <div className="menuContainer">
-                <Link path="/"><img className='logoheader' src={logo} alt="logo" id="logo-header"/></Link>
+                <Link to="/"><img className='logoheader' src={logo} alt="logo" id="logo-header"/></Link>
                 <div className={active ? 'icon iconActive' : `${props.theme} icon`} onClick={ToggleMode}>
                 </div>
             </div>

@@ -24,7 +24,7 @@
 
 .project_card {
     box-sizing: border-box;
-    width: 400px ;
+    max-width: 400px ;
     margin-top: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px #b8b8b8;

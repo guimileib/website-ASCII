@@ -28,3 +28,9 @@
     width: 100vw;
     bottom: -5px;
 }
+
+@media screen and (max-width: 800px) {
+    .title-banner-background {
+        padding-top: 200px;
+    }
+}
