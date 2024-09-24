@@ -39,16 +39,10 @@
 
     h3 {
         color: white;
-        font-weight: 600;
-        font-size: 20px;
-        transition: all 0.5s;
     }
 
     p {
         color: white;
-        font-weight: 400;
-        margin: 1em 0;
-        line-height: 150%;
     }
 }
 
@@ -71,6 +65,7 @@
     }
 
     .chevronIcon {
+        color: red;
         transition: all 0.5s 0.1s;
     }    
 }

@@ -1,0 +1,37 @@
+[
+    {
+        "nome":"João Manieri",
+        "cargo":"Diretor de Comercial", 
+        "curso":"Sistemas de Informação",
+        "foto":"membros/fotos/joao-manieri.jpg",
+        "linkedin":"https://www.linkedin.com/in/joao-otavio-manieri-140912243/"
+    },
+    {
+        "nome":"Murilo Beppler",
+        "cargo":"Diretor de Comercial", 
+        "curso":"Ciência da Computação",
+        "foto":"membros/fotos/murilo-beppler.jpg",
+        "linkedin":"https://www.linkedin.com/in/murilobeppler/"
+    },
+    {
+        "nome":"Lucas Janot",
+        "cargo":"Diretor de Comercial", 
+        "curso":"Ciência da Computação",
+        "foto":"membros/fotos/lucas-janot.jpg",
+        "linkedin":"https://www.linkedin.com/in/lucas-janot-8ba84a246/"
+    },
+    {
+        "nome":"Pedro Trevisan",
+        "cargo":"Diretor de Comercial", 
+        "curso":"Sistemas de Informação",
+        "foto":"membros/fotos/pedro-trevisan.jpg",
+        "linkedin":"https://www.linkedin.com/in/pedro-trevisan-856278263/"
+    },
+    {
+        "nome":"João Caio",
+        "cargo":"Diretor de Comercial", 
+        "curso":"Ciência da Computação",
+        "foto":"membros/fotos/joao-caio.jpg",
+        "linkedin":"https://www.linkedin.com/in/joaocaio/"
+    }
+]

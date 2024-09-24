@@ -5,23 +5,19 @@ import instagramLogo from "image/instagram-cor.png"
 import linkedinLogo from "image/linkedin-cor.png"
 import githubLogo from "image/github-cor.png"
 
+import Diretores from "components/Diretores/Diretores.js";
+
 import "./AboutUs.css"
 
 export default function AboutUs() {
     return (
         <section className="about-us">
-            <div className="about-us__container">
-                <div className="about-us__title">
-                    <h1>Quem Somos</h1>
-                    {/* <button>Conheça nossa equipe</button> */}
-                </div>
-                <div className="about-us__text">
-                    <p>A ASCII Soluções em Tecnologia é uma instituição constituída e gerida exclusivamente por estudantes da computação da Universidade Federal de Uberlândia (UFU).</p>
-                    <br></br>
-                    <p>Atuamos com front e back-end (design e experiencia do usuário, e funcionalidades da aplicação), ou seja, todo o escopo do projeto.</p>
-                </div>
+            <h2>Quem Somos</h2>
+            <div className="about-us__text">
+                <p>Desenvolvemos serviços e projetos para empresas de diferentes portes, atendendo demandas na área de <span>tecnologia da informação</span> - como apps desktop/mobile, sites e softwares completos.</p>
+                <p>A ASCII Soluções em Tecnologia é uma instituição constituída e gerida exclusivamente por estudantes da computação da Universidade Federal de Uberlândia (UFU). Atuamos com front e back-end (design e experiencia do usuário, e funcionalidades da aplicação), ou seja, todo o escopo do projeto.</p>
             </div>
-            <p className="about-us__hero">Desenvolvemos serviços e projetos para empresas de diferentes portes, atendendo demandas na área de <span>tecnologia da informação</span> - como apps desktop/mobile, sites e softwares completos.</p>
+            <Diretores />
             <section className="about-us__mvv">
                 <div className="mvv__container">
                     <div className="mvv__card">
@@ -53,19 +49,18 @@ export default function AboutUs() {
             </section>
 
             <section className="about-us__social-media">
-                <h1>Nos siga nas redes!</h1>
-                <h2>Fique por dentro das novidades</h2>
+                <h2>Nos siga nas redes!</h2>
                 <div className="social-media__wrapper">
                     <div className="social-media__container">
                         <img src={linkedinLogo} alt="Linkedin"></img>
                         <a target="_blank" href="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/">ASCII Empresa Junior</a>
                     </div>
-                    
+
                     <div className="social-media__container">
                         <img src={instagramLogo} alt="Instagram"></img>
                         <a target="_blank" href="https://www.instagram.com/asciiempresajr/">@asciiempresajr</a>
                     </div>
-                    
+
                     <div className="social-media__container">
                         <img src={githubLogo} alt="Github"></img>
                         <a target="_blank" href="https://github.com/asciiej/website-ASCII">asciiej</a>

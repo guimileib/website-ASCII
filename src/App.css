@@ -11,6 +11,7 @@
 
   /* Neutrals */
   --black: #1b1b1b;
+  --black-hover: #41414d;
   --silver: #f5f7f9;
 
   /* Typhography */
@@ -23,19 +24,36 @@ html,body {
   width: 100vw;
 }
 
-
-p {
-  line-height: 150%;
+h1 {
+    font-size: 48px;
+    color: white;
+    font-weight: 800;
 }
 
 h2 {
     text-align: center;
     color: var(--blue-dark);
     font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 800;
-    font-size: 2.3em;
-    margin: 0.5em 0;
+    font-weight: 700;
+    font-size: 36px;
+    margin: 80px 0 48px 0;;
 }
+
+h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+
+p {
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 1em 0;
+  color: var(--black);
+}
+
 
 button {
   font-family: 'Montserrat';
@@ -54,6 +72,7 @@ button:hover {
 
 section {
   margin-top: 3rem;
+  padding: 0 12%;
 }
 
 a {

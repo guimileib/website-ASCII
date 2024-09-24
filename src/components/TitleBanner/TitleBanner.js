@@ -14,7 +14,7 @@ export default function TitleBanner(props) {
             <div className='title-banner-background' 
             style={{backgroundImage: `url(${Background})`}}
             >
-                <h2>{props.title}</h2>
+                <h1>{props.title}</h1>
                 <img id={props.id} src={props.image} alt=""/>
             </div>
             <img className='wave-bottom' src={WaveBottom}></img>
