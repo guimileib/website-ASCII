@@ -2,6 +2,7 @@
     background: linear-gradient(144deg, rgba(6,19,128,1) 0%, rgba(4,10,61,1) 97%);
     margin: 0;
     overflow: hidden;
+    padding: 0;
 
     h1 {
         color: white;

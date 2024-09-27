@@ -9,6 +9,7 @@ import Home from 'pags/Home.js'
 import Footer from './components/Footer/Footer.js';
 import Portfolio from 'pags/Portfolio.js';
 import AboutUs from 'pags/AboutUs.js';
+import Members from 'pags/Members.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/sobre" element={<AboutUs />} />
+        <Route path="/membros" element={<Members />} />
       </Routes>
       <Footer />
     </Router>

@@ -5,7 +5,7 @@ import instagramLogo from "image/instagram-cor.png"
 import linkedinLogo from "image/linkedin-cor.png"
 import githubLogo from "image/github-cor.png"
 
-import Diretores from "components/Diretores/Diretores.js";
+import Diretores from "components/Directors/Directors.js";
 
 import "./AboutUs.css"
 
@@ -19,6 +19,7 @@ export default function AboutUs() {
             </div>
             <Diretores />
             <section className="about-us__mvv">
+                <h2>Missão, Visão, Valores</h2>
                 <div className="mvv__container">
                     <div className="mvv__card">
                         <img src={missionIcon} alt=""></img>
