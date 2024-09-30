@@ -31,4 +31,12 @@
     .title-banner-background {
         padding-top: 200px;
     }
+
+    .banner-image {
+        display: none;
+    }
+
+    .title-banner-background {
+        height: 50%;
+    }
 }

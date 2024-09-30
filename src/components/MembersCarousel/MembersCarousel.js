@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 
 import linkedinIcon from "image/linkedin.png";
 import navIcon from "image/carousel-nav.svg";
-import "../Directors/Directors.css"
+import "./MembersCarousel.css"
 
 export default function MembrosCarousel(props) {
 
@@ -20,13 +20,12 @@ export default function MembrosCarousel(props) {
 
     const handleLeftClick = (event) => {
         event.preventDefault();
-        carousel.current.scrollLeft -= (carousel.current.offsetWidth - carouselItem.current.offsetWidth);
-        console.log(carousel.current.offsetWidth);
+        carousel.current.scrollLeft -= (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
     }
 
     const handleRightClick = (event) => {
         event.preventDefault();
-        carousel.current.scrollLeft += (carousel.current.offsetWidth - carouselItem.current.offsetWidth);
+        carousel.current.scrollLeft += (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
     }
 
 

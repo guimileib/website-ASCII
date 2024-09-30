@@ -1,0 +1,61 @@
+.slider__card{
+    width: 272px;
+}
+
+.nome {
+    font-size: 24px;
+    font-weight: 600px;
+    color: var(--black);
+    margin-bottom: 16px;
+    align-items: top;
+}
+
+.cargo,
+.curso {
+    font-size: 16px;
+    margin: 0;
+}
+
+.cargo {
+    font-weight: 600;
+}
+
+
+.carousel__image {
+    position: relative;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+.foto {
+    height: 272px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 00px 16px lightgray;
+}
+
+.profile-button {
+    position: absolute;
+    right: 0;
+    margin: 16px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--black);
+    color: var(--silver);
+    border-radius: 8px;
+    animation: all 0.2s;
+    width: 24px;
+    height: 24px;
+
+    img {
+        width: 24px;
+    }
+}
+
+.profile-button:hover {
+    cursor: pointer;
+    background-color: var(--black-hover);
+}

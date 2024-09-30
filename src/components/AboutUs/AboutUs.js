@@ -5,7 +5,8 @@ import instagramLogo from "image/instagram-cor.png"
 import linkedinLogo from "image/linkedin-cor.png"
 import githubLogo from "image/github-cor.png"
 
-import Diretores from "components/Directors/Directors.js";
+import MembersCarousel from 'components/MembersCarousel/MembersCarousel.js';
+import {Link} from 'react-router-dom';
 
 import "./AboutUs.css"
 
@@ -17,7 +18,13 @@ export default function AboutUs() {
                 <p>Desenvolvemos serviços e projetos para empresas de diferentes portes, atendendo demandas na área de <span>tecnologia da informação</span> - como apps desktop/mobile, sites e softwares completos.</p>
                 <p>A ASCII Soluções em Tecnologia é uma instituição constituída e gerida exclusivamente por estudantes da computação da Universidade Federal de Uberlândia (UFU). Atuamos com front e back-end (design e experiencia do usuário, e funcionalidades da aplicação), ou seja, todo o escopo do projeto.</p>
             </div>
-            <Diretores />
+           
+            <h2>Nossas lideranças</h2>
+            <p>Nossa equipe é dividida em várias frentes, que contam com a liderança dos seguintes diretores:</p>
+            <MembersCarousel diretoria="diretor" />
+            <p className="highlight"> Contamos com um time dedicado e diverso, conheça mais sobre nossos membros: </p>
+            <Link to="/membros/#members-anchor"><button>Conheça toda a equipe</button></Link>
+
             <section className="about-us__mvv">
                 <h2>Missão, Visão, Valores</h2>
                 <div className="mvv__container">

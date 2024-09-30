@@ -95,7 +95,7 @@
     display: none;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 800px) {
 
     .carousel__container {
         margin: 48px 0 32px 0;
@@ -108,5 +108,9 @@
     
     .carousel__nav.desktop {
         display: none;
+    }
+
+    .carousel {
+        overflow: scroll;
     }
 }

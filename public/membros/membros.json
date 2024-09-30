@@ -206,5 +206,45 @@
     "diretoria": "projetos",
     "foto": "../membros/fotos/whebert-batista.jpg",
     "linkedin": "https://www.linkedin.com/in/whebert-batista-do-nascimento-56692a244/"
-  }
+  },
+    {
+        "nome":"João Manieri",
+        "curso":"Sistemas de Informação",
+        "cargo":"Diretor de Comercial", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/joao-manieri.jpg",
+        "linkedin":"https://www.linkedin.com/in/joao-otavio-manieri-140912243/"
+    },
+    {
+        "nome":"Murilo Beppler",
+        "curso":"Ciência da Computação",
+        "cargo":"Presidente", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/murilo-beppler.jpg",
+        "linkedin":"https://www.linkedin.com/in/murilobeppler/"
+    },
+    {
+        "nome":"Lucas Janot",
+        "curso":"Ciência da Computação",
+        "cargo":"Diretor de Projetos", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/lucas-janot.jpg",
+        "linkedin":"https://www.linkedin.com/in/lucas-janot-8ba84a246/"
+    },
+    {
+        "nome":"Pedro Trevisan",
+        "curso":"Sistemas de Informação",
+        "cargo":"Diretor de Adm/Financeiro", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/pedro-trevisan.jpg",
+        "linkedin":"https://www.linkedin.com/in/pedro-trevisan-856278263/"
+    },
+    {
+        "nome":"João Caio",
+        "curso":"Ciência da Computação",
+        "cargo":"Diretor de Gestão de Pessoas", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/joao-caio.jpg",
+        "linkedin":"https://www.linkedin.com/in/joaocaio/"
+    }
 ]
