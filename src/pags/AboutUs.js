@@ -3,7 +3,7 @@ import Banner from "components/TitleBanner/TitleBanner.js"
 import AboutUsImg from "image/quem-somos.png"
 import Header from "components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
-
+import MembersCarousel from 'components/MembersCarousel/MembersCarousel.js'; 
 
 export default function AboutUs() {
     return (
