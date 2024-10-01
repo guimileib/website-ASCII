@@ -5,7 +5,7 @@ import linkedinIcon from "image/linkedin.png";
 import navIcon from "image/carousel-nav.svg";
 import "./MembersCarousel.css"
 
-export default function MembrosCarousel(props) {
+export default function MembersCarousel(props) {
 
     const [data, setData] = useState([]);
     const carousel = useRef(null);
