@@ -6,17 +6,20 @@ import navIcon from "image/carousel-nav.svg";
 import "./MembersCarousel.css"
 
 export default function MembersCarousel(props) {
-
     const [data, setData] = useState([]);
     const carousel = useRef(null);
     const carouselItem = useRef(null);
 
     // Função que vai ser executada sempre que a página é re-renderizada. Como não tem nenhuma dependência, só será executada uma vez, quando o componente for renderizado.
     useEffect(() => {
-        fetch('http://localhost:3000/membros/membros.json')
-            .then((response) => response.json())
-            .then(setData);
+        getData().then(setData);
     }, []);
+
+    const getData = async () => {
+        const response = await fetch('http://localhost:3000/membros/membros.json');
+        const data = await response.json();
+        return data;
+    }
 
     const handleLeftClick = (event) => {
         event.preventDefault();
