@@ -17,8 +17,8 @@ export default function MembersCarousel(props) {
 
     const getData = async () => {
         const response = await fetch('http://localhost:3000/membros/membros.json');
-        const data = await response.json();
-        return data;
+        const jsonData = await response.json();
+        return jsonData;
     }
 
     const handleLeftClick = (event) => {
@@ -30,9 +30,6 @@ export default function MembersCarousel(props) {
         event.preventDefault();
         carousel.current.scrollLeft += (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
     }
-
-
-    if (!data || !data.length) return null;
 
     return (
         <>
