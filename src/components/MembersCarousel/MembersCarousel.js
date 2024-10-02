@@ -5,6 +5,8 @@ import linkedinIcon from "image/linkedin.png";
 import navIcon from "image/carousel-nav.svg";
 import "./MembersCarousel.css"
 
+export default function MembersCarousel(props) {
+    const [data, setData] = useState([]);
 export default function MembrosCarousel(props) {
 
     const [data, setData] = useState([{}]);
@@ -28,13 +30,6 @@ export default function MembrosCarousel(props) {
 
     useEffect(() => {getData()}, [])
 
-    // Função que vai ser executada sempre que a página é re-renderizada. Como não tem nenhuma dependência, só será executada uma vez, quando o componente for renderizado.
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/membros/membros.json')
-    //         .then((response) => response.json())
-    //         .then(setData);
-    // }, []);
-
     const handleLeftClick = (event) => {
         event.preventDefault();
         carousel.current.scrollLeft -= (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
@@ -44,9 +39,6 @@ export default function MembrosCarousel(props) {
         event.preventDefault();
         carousel.current.scrollLeft += (carousel.current.offsetWidth - (carouselItem.current.offsetWidth) );
     }
-
-
-    if (!data || !data.length) return null;
 
     return (
         <>
