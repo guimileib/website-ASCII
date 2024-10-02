@@ -11,6 +11,8 @@ import Portfolio from 'pags/Portfolio.js';
 import AboutUs from 'pags/AboutUs.js';
 import Members from 'pags/Members.js';
 
+import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/membros" element={<Members />} />
+        
       </Routes>
       <Footer />
     </Router>
