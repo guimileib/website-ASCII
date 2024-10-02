@@ -7,16 +7,22 @@ import "./MembersCarousel.css"
 
 export default function MembrosCarousel(props) {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([{}]);
     const carousel = useRef(null);
     const carouselItem = useRef(null);
 
-    // Função que vai ser executada sempre que a página é re-renderizada. Como não tem nenhuma dependência, só será executada uma vez, quando o componente for renderizado.
-    useEffect(() => {
-        fetch('http://localhost:3000/membros/membros.json')
-            .then((response) => response.json())
-            .then(setData);
-    }, []);
+    const getData = () => {
+        fetch('data/membros.json',
+            { headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }}
+        )
+        .then((response) => response.json())
+        .then((membersData) => console.log(membersData));
+    }
+
+    useEffect(() => {getData()}, []);
 
     const handleLeftClick = (event) => {
         event.preventDefault();
