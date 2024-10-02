@@ -6,9 +6,6 @@ import navIcon from "image/carousel-nav.svg";
 import "./MembersCarousel.css"
 
 export default function MembersCarousel(props) {
-    const [data, setData] = useState([]);
-export default function MembrosCarousel(props) {
-
     const [data, setData] = useState([{}]);
     const carousel = useRef(null);
     const carouselItem = useRef(null);
