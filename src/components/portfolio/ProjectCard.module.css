@@ -1,48 +1,28 @@
-.title {
-    left: 8%;
-    z-index: 2;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: left;
-
-    h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        left: 5%;
-        text-align: left;
-    }
-
-    img {
-        height: 2.3rem;
-    }
-
-    span {
-        font-weight: 800;
-    }
-}
 
 .project_card {
     box-sizing: border-box;
-    max-width: 400px ;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px #b8b8b8;
-    padding-bottom: 1rem;
+    width: 344px ;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px #b8b8b8;
+    padding-bottom: 16px;
+    height: 440px;
 
     img {
         width: 100%;
+        height: 200px;
         object-fit: cover;
-        border-radius: 10px 10px 0 0;
+        border-radius: 8px;
+        margin-bottom: 16px;
     }
 
     button {
-        padding: 0.7rem 1rem;
+        padding: 8px 16px;
         color: black;
         background-color: var(--silver);
         border: none;
-        border-radius: 6px;
-        margin: 1rem 0 0 50%;
+        border-radius: 8px;
+        margin: 8px 0 0 60%;
     }
 
     button:hover {
@@ -53,20 +33,38 @@
 }
 
 .project_text {
-    padding: 0 2rem;
+    padding: 0 32px;
+    height: 40%;
+
+    h5 {
+        color: var(--blue-light);
+        font-size: 12px;
+    }
 
     h4 {
         font-size: 20px;
-        color: var(--blue-light);
+        color: var(--black);
         font-weight: 600;
-        margin: 1rem 0;
+        margin: 8px 0;
     }
 
     p {
-        text-align: justify;
+        font-size: 16px;
+        margin: 0px;
     }
 }
 
 button .off {
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .project_card {
+        button {
+            display: block;
+            width: 90%;
+            margin: 8px auto;
+            padding: 8px 20px;
+        }
+    }
 }

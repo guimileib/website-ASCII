@@ -1,7 +1,8 @@
 .portfolio {
-    padding: 0 12%;
     margin-top: 2rem;
 }
+
+
 
 .titles {
     left: 8%;
@@ -27,5 +28,12 @@
 }
 
 .projects_wrapper {
-    margin: 4rem 0;
+    display: flex;
+    gap: 32px;
+}
+
+@media screen and (max-width: 800px) {
+    .projects_wrapper {
+        flex-wrap: wrap;
+    }
 }

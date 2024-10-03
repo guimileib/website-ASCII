@@ -7,12 +7,13 @@ export default function ProjectCard(props) {
         <div className={styles.project_card}>
             <img src={props.image} alt={props.alt}/>
             <div className={styles.project_text}>
+                <h5>{props.category}</h5>
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
-                <a href={props.link} target="_blank">
-                    <button>{props.button}</button>
-                </a>
             </div>
+            <a href={props.link} target="_blank">
+                <button>Saiba mais</button>
+            </a>
         </div>
     );
 }
