@@ -12,6 +12,7 @@ import AboutUs from 'pags/AboutUs.js';
 import Members from 'pags/Members.js';
 
 import Uberground from 'pags/Uberground';
+import JusConsultoria from 'pags/JusConsultoria'
 import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/membros" element={<Members />} />
         <Route path="/portfolio/uberground" element={<Uberground />} />
+        <Route path="/portfolio/jus-consultoria" element={<JusConsultoria />} />
       </Routes>
       <Footer />
     </Router>

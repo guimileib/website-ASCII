@@ -27,7 +27,7 @@ export default function Projects() {
                     category='Desenvolvimento de Site'
                     title='Uberground'
                     description='Site de divulgação cultural, com notícias e atualizações sobre a cena artística de Uberlândia.'
-                    link='/portfolio/uberground'
+                    link='/portfolio/uberground/#case-anchor'
                 />
 
                 <ProjectCard 
@@ -36,10 +36,8 @@ export default function Projects() {
                     category='Desenvolvimento de Software'
                     title='Jus Consultoria'
                     description='Aplicativo desktop para preenchimento otimizado de contratos. Conta com sistema de cadastro com login e senha.'
-                    link='/portfolio/jus-consultoria'
+                    link='/portfolio/jus-consultoria/#case-anchor'
                 />
-
-            <button><Link to="/portfolio/case-uberground/"></Link></button>
             </div>
         </section>
     );

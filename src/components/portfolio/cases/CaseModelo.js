@@ -7,7 +7,7 @@ import chevronIcon from 'image/chevron-right.svg';
 export default function CaseUberground() {
     return (
         <section className={styles.caseDeSucesso}>
-            <div className='case-anchor'></div>
+            <div id='case-anchor'></div>
             <div className={styles.caseTitulo}>
                 <h2>Case de Sucesso</h2>
                 <h1>Jus Consultoria</h1>

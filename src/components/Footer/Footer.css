@@ -26,6 +26,10 @@
     a:hover {
       color: white;
     }
+
+    p {
+      margin: 0;
+    }
     
 }
 .footer__wrapper {

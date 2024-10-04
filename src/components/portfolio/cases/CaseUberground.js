@@ -42,7 +42,7 @@ export default function CaseUberground() {
                 </div>
                 <div className={styles.galleryTitle}>
                     <h2>Galeria do Projeto</h2>
-                    <a href="">Acesse o site <img src={chevronIcon}></img></a>
+                    <a href="https://uberground.com.br/" target="_blank">Acesse o site <img src={chevronIcon}></img></a>
                 </div>
                 <div className={styles.gallery}>
                     <img className={styles.galleryItem} src={img1} alt="Homepage do blog Uberground"></img>
