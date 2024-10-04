@@ -1,6 +1,7 @@
 
 // Esse é o ocmponente do cartão de cada aprojeot
 import styles from './ProjectCard.module.css'
+import { Link } from 'react-router-dom';
 
 export default function ProjectCard(props) {
     return (
@@ -11,9 +12,11 @@ export default function ProjectCard(props) {
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
             </div>
-            <a href={props.link} target="_blank">
-                <button>Saiba mais</button>
-            </a>
+            <Link to={props.link}>
+                <button>
+                    Saiba mais
+                </button>
+            </Link>
         </div>
     );
 }

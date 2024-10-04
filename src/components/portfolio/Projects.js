@@ -11,6 +11,7 @@
 
 import styles from './Projects.module.css'
 import ProjectCard from './ProjectCard';
+import { Link } from 'react-router-dom';
 
 import jus from 'image/Jus.png'
 import uberground from 'image/uberground.png'
@@ -26,7 +27,7 @@ export default function Projects() {
                     category='Desenvolvimento de Site'
                     title='Uberground'
                     description='Site de divulgação cultural, com notícias e atualizações sobre a cena artística de Uberlândia.'
-                    link='https://uberground.com.br/'
+                    link='/portfolio/uberground'
                 />
 
                 <ProjectCard 
@@ -35,8 +36,10 @@ export default function Projects() {
                     category='Desenvolvimento de Software'
                     title='Jus Consultoria'
                     description='Aplicativo desktop para preenchimento otimizado de contratos. Conta com sistema de cadastro com login e senha.'
-                    link='https://jusconsultorias.com.br/'
+                    link='/portfolio/jus-consultoria'
                 />
+
+            <button><Link to="/portfolio/case-uberground/"></Link></button>
             </div>
         </section>
     );
