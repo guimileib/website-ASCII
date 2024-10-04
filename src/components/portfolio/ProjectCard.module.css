@@ -23,6 +23,7 @@
         border: none;
         border-radius: 8px;
         margin: 8px 0 0 60%;
+        transition: all 0.08s;
     }
 
     button:hover {

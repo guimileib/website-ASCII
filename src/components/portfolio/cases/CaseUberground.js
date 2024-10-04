@@ -10,7 +10,7 @@ import img3 from '../../../image/uberground-3.jpg';
 export default function CaseUberground() {
     return (
         <>
-            <div className='case-anchor'></div>
+            <div id='case-anchor'></div>
             <div className={styles.caseTitulo}>
                 <h2>Case de Sucesso</h2>
                 <h1>Uberground</h1>
