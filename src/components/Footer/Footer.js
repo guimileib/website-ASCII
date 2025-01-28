@@ -30,12 +30,12 @@ function Footer() {
           <ul>
             <li><Link to="/portfolio/#portfolio-anchor">Portfolio</Link></li>
             <li><Link to="/sobre/#sobre-anchor">Quem Somos</Link></li>
-            <li><Link to="/explore">Explore+</Link></li>
-            <li><Link to="/contato">Contato</Link></li>
+            <li><span className="inactive-link">Explore+</span></li>
+            <li><span className="inactive-link">Contato</span></li>
           </ul>
         </div>
       </div>
-      <p className="copyright" style={{ marginTop: '-20px' }}>&copy; 2024 ASCII</p>
+      <p className="copyright" style={{ marginTop: '20px' }}>&copy; 2024 ASCII</p>
     </footer>
   );
 }
