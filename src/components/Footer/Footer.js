@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import logo from 'image/logoHorizontal.png';
 
 import './Footer.css';
 import Background from 'image/mapa-fundo.svg';
-import WaveTop from 'image/wave-top.svg';
+import CustomShapeDivider from './../CustomShapeDivider';
 
 function Footer() {
   return (
     <footer className="footer">
-      {/* Adicionando a onda no topo do footer */}
-      <img className='wave-top' src={WaveTop} alt="Onda superior" />
-
-      <div className='footer__wrapper' style={{ backgroundImage: `url(${Background})` }}>
+      <div className="footer__divider-wrapper">
+        <CustomShapeDivider />
+      </div>
+      <div className="footer__wrapper" style={{ backgroundImage: `url(${Background})` }}>
         <div className='footer__container'>
           <h3>Nossos Serviços</h3>
           <ul>
@@ -35,8 +35,9 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="copyright" style={{ marginTop: '20px' }}>&copy; 2024 ASCII</p>
+      <p className="copyright">© 2024 ASCII</p>
     </footer>
+
   );
 }
 
