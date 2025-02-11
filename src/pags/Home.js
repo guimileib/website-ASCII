@@ -6,6 +6,7 @@ import OurServices from 'components/OurServices/OurServices.js';
 import Mvv from 'components/Mvv/Mvv.js';
 import Contact from 'components/Contact/Contact.js';
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
+import DepoimentosSlider from 'components/Avaliações/DepoimentosSlider.js';
 
 function Home() {
   return (
@@ -16,8 +17,10 @@ function Home() {
       <OurServices />
       <PortfolioSection />
       <Mvv />
-      <Logos />
+      <DepoimentosSlider />
       <Contact />
+      <Logos />
+
     </>
   );
 }

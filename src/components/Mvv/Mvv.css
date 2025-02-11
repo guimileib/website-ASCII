@@ -1,4 +1,7 @@
 .mvv {
+
+    margin-bottom: 4rem;
+
     button {
         border: none;
         border-radius: 6px;
@@ -17,7 +20,8 @@
     button:active {
         background-color: #449648; /* Cor ao clicar no botão */
         transform: translateY(2px); /* Adiciona um efeito de "pressionamento" */
-    }    
+    }
+
 }
 .cards-wrapper {
     display: flex;

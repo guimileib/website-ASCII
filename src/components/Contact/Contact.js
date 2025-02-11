@@ -1,30 +1,145 @@
-import './Contact.css'
+import './Contact.css';
+import { useState, useRef, useEffect } from 'react';
+import InputMask from "react-input-mask";
+import { Link } from 'react-router-dom';
 
-import mailIcon from 'image/mail.svg'
-import whatsappIcon from 'image/whatsapp.svg'
-import adressIcon from 'image/address.svg'
+import emailIcon from 'image/email.png';
+import whatsappIcon from 'image/whatsapp.png';
+import addressIcon from 'image/address.png';
+import instagramIcon from 'image/instagram.png';
+import linkedinIcon from 'image/linkedin.png';
+import githubIcon from 'image/github.png';
 
-export default function Contact () {
+export default function Contact() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [telefone, setTelefone] = useState('')
+    const [assunto, setAssunto] = useState("Orçamento");
+    const [isFocused, setIsFocused] = useState(false);
+    const textareaRef = useRef(null);
+
+      // Função para ajustar a altura automaticamente
+    useEffect(() => {
+        if (textareaRef.current) {
+        textareaRef.current.style.height = "auto"; // Redefine a altura
+        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Ajusta conforme o conteúdo
+        }
+    }, [message]); // Atualiza sempre que o texto mudar
+
     return (
-        <section className='agendarReuniao' id="agendar-reuniao">
-            <div className='agendarReuniao__text'>
-                 <h3>Agende uma reunião!</h3>
-                 <p>Saiba como nossa equipe pode ajudar a sua empresa!</p>
-                 <button>
-                    <a target='blank_' href='https://api.whatsapp.com/send?phone=5511971669926'>Entre em contato</a>
-                 </button>
-            </div>
-            <div className='agendarReuniao__links'>
-                <a target='blank_'className='agendarReuniao__link'>
-                    <img src={mailIcon} alt=''/>ascii@gmail.com
-                </a>
-                <a target='blank_' className='agendarReuniao__link' href='https://api.whatsapp.com/send?phone=5511971669926'>
-                <img src={whatsappIcon} alt=''/> (11) 97166-9926
-                </a>
-                <a target='blank_' className='agendarReuniao__link'  href='https://www.google.com.br/maps/place/UFU+BLOCO+1B/@-18.9187011,-48.2620915,17z/data=!3m1!4b1!4m6!3m5!1s0x94a445b99dd0589d:0xa56c91f962191311!8m2!3d-18.9187062!4d-48.2595166!16s%2Fg%2F11p02hs04k?entry=ttu'>
-                <img src={adressIcon} alt=''/> Universidade Federal de Uberlândia, Bloco 1B, Sala 201A, Uberlândia - MG
-                </a>
+        <section className='contact-container' id="agendar-reuniao">
+
+                <h2>Agende uma reunião!</h2>
+                <p>Saiba como nossa equipe pode ajudar a sua empresa!</p>
+                
+            <div className='contact-content'>
+
+                <div className='contact-info-container'>
+                    <h3>Informações de Contato</h3>
+                    <p>Fale conosco! Estamos à disposição para atender você.</p>
+                    
+                    <div className='contact-details'>
+                        <div className="contact-item">
+                            <img src={whatsappIcon} alt="Whatsapp" />
+                            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/+5534991523387">(34) 99152-3387</a>
+                        </div>
+                        <div className="contact-item">
+                            <img src={emailIcon} alt="Email" />
+                            <a target="_blank" rel="noopener noreferrer" href="mailto:ascii@gmail.com">ascii@gmail.com</a>
+                        </div>
+                        <div className="contact-item">
+                            <img src={addressIcon} alt="Endereço" />
+                            <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/ng1t8887m4m9fh2F9">Universidade Federal de Uberlândia, Bloco 1B, Uberlândia - MG</a>
+                        </div>
+                    </div>
+                    
+                    <div className='social-media-container'>
+                        <Link target="_blank" to="https://www.instagram.com/asciiempresajr/"><img src={instagramIcon} alt="Instagram" className="social-icon" /></Link>
+                        <Link target="_blank" to="https://www.linkedin.com/company/ascii-empresa-j%C3%BAnior/"><img src={linkedinIcon} alt="Linkedin" className="social-icon" /></Link>
+                        <Link target="_blank" to="https://github.com/asciiej"><img src={githubIcon} alt="Github" className="social-icon" /></Link>
+                    </div>
+                </div>
+                
+                <div className='contact-form'>
+                    <form className="form" onSubmit={() => {}}>
+                        <div className="input-container">
+                            <input 
+                                className={name ? "filled" : ""}
+                                type="text"
+                                onChange={(e) => setName(e.target.value)}
+                                value={name}
+                                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+"
+                                title="Digite apenas letras e espaços"
+                                required
+                            />
+                            <label className={name || isFocused ? "label active" : "label"}>Nome</label>
+                        </div>
+                        
+                        <div class="nomeEmail">
+                            <div className="input-container">
+                                <input
+                                    className={email ? "filled" : ""}
+                                    type="text"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
+                                />
+                                <label className={email || isFocused ? "label active" : "label"}>Email</label>
+                            </div>
+                            
+                            <div className="input-container">
+                                <InputMask
+                                    mask="(99) 99999-9999"
+                                    className={telefone ? "filled" : ""}
+                                    type="tel"
+                                    onChange={(e) => setTelefone(e.target.value)}
+                                    value={telefone}
+                                    required
+                                />
+                                <label className={telefone || isFocused ? "label active" : "label"}>Telefone</label>
+                            </div>
+                        </div>
+                        
+                        <div className="radio-container">
+                            <p className="label">Selecionar Assunto</p>
+                            <div className="radio-group">
+                                {["Orçamento", "Dúvida", "Parceria", "Outros"].map((item) => (
+                                    <label key={item} className={`radio-label ${assunto === item ? "selected" : ""}`}>
+                                        <input
+                                            type="radio"
+                                            name="assunto"
+                                            value={item}
+                                            checked={assunto === item}
+                                            onChange={(e) => setAssunto(e.target.value)}
+                                        />
+                                        <span className="custom-radio"></span> {item}
+                                    </label>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="input-container">
+                            <textarea
+                                ref={textareaRef}
+                                className={message ? "filled" : ""}
+                                placeholder="Escreva sua mensagem..."
+                                onChange={(e) => setMessage(e.target.value)}
+                                value={message}
+                                required
+                            />
+                            <label className={message || isFocused ? "label active" : "label"}>Mensagem</label>
+                        </div>
+                        
+                        <div class="container-button">
+                            <input className="button" type="submit" value="Enviar mensagem"  />
+                        </div>
+                        
+                    </form>
+                </div>
+
             </div>
         </section>
     );
-};
+}

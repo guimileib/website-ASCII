@@ -14,12 +14,14 @@ function Members() {
       <TitleBanner title='Nossa equipe' image='' />
 
       <section className="membros">
+        {/*
         <h2>Trainees</h2>
         <p>
           São recém-chegados na empresa junior, empenhados em aprender e contribuir com novas ideias.
         </p>
-        <MembersCarousel diretoria="trainee" />
-
+        <MembersCarousel diretoria="trainee" />        
+        */}
+        
         <h2>Administrativo Financeiro</h2>
         <p>
           Planeja, controla e supervisiona as atividades financeiras e administrativas. Isso inclui orçamento, fluxo de caixa, viabilidade econômica de projetos, relatórios gerenciais e negociações com fornecedores. 
