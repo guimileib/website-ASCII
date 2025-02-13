@@ -2,162 +2,90 @@
   {
     "nome": "Daniel Gentil",
     "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
     "foto": "../membros/fotos/daniel-gentil.jpg",
     "linkedin": "https://www.linkedin.com/in/daniel-gentil-861585249/"
   },
   {
-    "nome": "Diego de Miranda",
-    "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
-    "foto": "../membros/fotos/diego-silva.jpg",
-    "linkedin": "https://www.linkedin.com/in/diegodemiranda"
-  },
-  {
     "nome": "Herbert Tolentino",
     "curso": "Sistemas de Informação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
     "foto": "../membros/fotos/herbert-tolentino.jpg",
     "linkedin": "https://www.linkedin.com/in/herbert-tolentino"
   },
   {
     "nome": "Ilton Batista Silva",
     "curso": "Sistemas de Informação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "projetos",
     "foto": "../membros/fotos/ilton-silva.jpg",
     "linkedin": "https://www.linkedin.com/in/iltonbsilva/"
   },
   {
-    "nome": "Israel Lúcio",
+    "nome": "Marcus Arthur",
     "curso": "Sistemas de Informação",
-    "cargo": "Assessor e Desenvolvedor",
-    "diretoria": "gestao-pessoas",
-    "foto": "../membros/fotos/israel-vaz.jpg",
-    "linkedin": "https://www.linkedin.com/in/israel-vaz-2b4678181/?originalSubdomain=br"
-  },
-  {
-    "nome": "Jaiany Oliveira",
-    "curso": "Sistemas de Informação",
-    "cargo": "Desenvolvedora",
-    "diretoria": "projetos",
-    "foto": "../membros/fotos/jaiany-silva.jpg",
-    "linkedin": "https://www.linkedin.com/in/jaiany-oliveira-172b47263/"
-  },
-  {
-    "nome": "Joao Caio Pereira",
-    "curso": "Ciência da Computação",
     "cargo": "Diretor",
     "diretoria": "gestao-pessoas",
-    "foto": "../membros/fotos/joao-caio.jpg",
-    "linkedin": "https://www.linkedin.com/in/joaocaio/"
+    "foto": "../membros/fotos/marcus-arthur.jpg",
+    "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
   },
   {
-    "nome": "Joao Caio Pereira",
-    "curso": "Ciência da Computação",
+    "nome": "Marcus Arthur",
+    "curso": "Sistemas de Informação",
     "cargo": "Vice-presidente",
     "diretoria": "presidencia",
-    "foto": "../membros/fotos/joao-caio.jpg",
-    "linkedin": "https://www.linkedin.com/in/joaocaio/"
-  },
-  {
-    "nome": "Joao Otavio Manieri",
-    "curso": "Sistemas de Informação",
-    "cargo": "Diretor",
-    "diretoria": "marketing",
-    "foto": "../membros/fotos/joao-manieri.jpg",
-    "linkedin": "https://www.linkedin.com/in/joao-otavio-manieri-140912243/"
+    "foto": "../membros/fotos/marcus-arthur.jpg",
+    "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
   },
   {
     "nome": "Katarine Rodrigues",
     "curso": "Sistemas de Informação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "adm-financeiro",
     "foto": "../membros/fotos/katarine-almeida.jpg",
     "linkedin": "https://www.linkedin.com/in/katarine-rodrigues-almeida/"
   },
   {
     "nome": "Kauan Rodrigues",
     "curso": "Sistemas de Informação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Diretor",
+    "diretoria": "projetos",
     "foto": "../membros/fotos/kauan-barros.jpg",
     "linkedin": "https://www.linkedin.com/in/kaurodri"
   },
   {
     "nome": "Kristen Pavarinie",
     "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Diretor",
+    "diretoria": "marketing",
     "foto": "../membros/fotos/kristen-pereira.jpg",
     "linkedin": "https://www.linkedin.com/in/kristen-pavarine-7b6a14328/"
   },
   {
-    "nome": "Laura Mendes",
-    "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
-    "foto": "../membros/fotos/laura-goncalves.jpg",
-    "linkedin": "https://www.linkedin.com/in/laura-m-32b47a1b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  },
-  {
     "nome": "Leonardo Andrade",
     "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Diretor",
+    "diretoria": "adm-financeiro",
     "foto": "../membros/fotos/leonardo-andrade.jpg",
-    "linkedin": ""
+    "linkedin": "https://www.linkedin.com/in/leonardo-alfaro-895142346/"
   },
   {
     "nome": "Lucas Araújo",
     "curso": "Sistemas de Informação",
-    "cargo": "Assessor e Desenvolvedor",
+    "cargo": "Gerente e Desenvolvedor",
     "diretoria": "marketing",
     "foto": "../membros/fotos/lucas-araujo.jpg",
     "linkedin": "https://www.linkedin.com/in/lucasara%C3%BAjodeoliveira/"
   },
   {
-    "nome": "Lucas Gabriel",
-    "curso": "Sistemas de Informação",
-    "cargo": "Assessora e Desenvolvedor",
-    "diretoria": "adm-financeiro",
-    "foto": "../membros/fotos/lucas-gabriel.jpg",
-    "linkedin": "https://www.linkedin.com/in/aflucasgabriel/"
-  },
-  {
-    "nome": "Lucas Janot",
-    "curso": "Ciência da Computação",
-    "cargo": "Diretor",
-    "diretoria": "projetos",
-    "foto": "../membros/fotos/lucas-janot.jpg",
-    "linkedin": "https://www.linkedin.com/in/lucas-janot-8ba84a246/"
-  },
-  {
     "nome": "Malcon Rezende",
     "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Gerente e Desenvolvedor",
+    "diretoria": "marketing",
     "foto": "../membros/fotos/malcon-rezende.jpg",
     "linkedin": "https://www.linkedin.com/in/malcon-rezende/"
-  },
-  {
-    "nome": "Marcus Arthur",
-    "curso": "Sistemas de Informação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
-    "foto": "../membros/fotos/marcus-arthur.jpg",
-    "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
-  },
-  {
-    "nome": "Matheus Henrique",
-    "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
-    "foto": "../membros/fotos/matheus-henrique.jpg",
-    "linkedin": "https://www.linkedin.com/in/matheus-h-a-pires-9731ba219/"
   },
   {
     "nome": "Murilo Beppler",
@@ -168,44 +96,28 @@
     "linkedin": "https://www.linkedin.com/in/murilobeppler/"
   },
   {
-    "nome": "Pedro Trevisan",
-    "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "adm-financeiro",
-    "foto": "../membros/fotos/pedro-trevisan.jpg",
-    "linkedin": "https://www.linkedin.com/in/pedro-trevisan-856278263/"
-  },
-  {
     "nome": "Raquel Emillene",
     "curso": "Ciência da Computação",
-    "cargo": "Trainee",
-    "diretoria": "trainee",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
     "foto": "../membros/fotos/raquel-thome.jpg",
     "linkedin": "https://www.linkedin.com/in/raquel-freire-a2a578325/"
   },
   {
-    "nome": "Rayane Reis",
-    "curso": "Sistemas de Informação",
-    "cargo": "Assessora e Desenvolvedora",
-    "diretoria": "marketing",
-    "foto": "../membros/fotos/rayane-reis.jpg",
-    "linkedin": "www.linkedin.com/in/rayane-reis-mota-896b0a21b"
-  },
-  {
     "nome": "Whebert Batista",
     "curso": "Ciência da Computação",
-    "cargo": "Assessor e Desenvolvedor",
+    "cargo": "Gerente de inovação",
     "diretoria": "projetos",
     "foto": "../membros/fotos/whebert-batista.jpg",
     "linkedin": "https://www.linkedin.com/in/whebert-batista-do-nascimento-56692a244/"
   },
     {
-        "nome":"João Manieri",
+        "nome":"Kristen Pavarinie",
         "curso":"Sistemas de Informação",
-        "cargo":"Diretor de Comercial", 
+        "cargo":"Diretor de Comercial/Marketing", 
         "diretoria": "diretor",
-        "foto":"../membros/fotos/joao-manieri.jpg",
-        "linkedin":"https://www.linkedin.com/in/joao-otavio-manieri-140912243/"
+        "foto":"../membros/fotos/kristen-pereira.jpg",
+        "linkedin":"https://www.linkedin.com/in/kristen-pavarine-7b6a14328/"
     },
     {
         "nome":"Murilo Beppler",
@@ -216,27 +128,27 @@
         "linkedin":"https://www.linkedin.com/in/murilobeppler/"
     },
     {
-        "nome":"Lucas Janot",
-        "curso":"Ciência da Computação",
-        "cargo":"Diretor de Projetos", 
-        "diretoria": "diretor",
-        "foto":"../membros/fotos/lucas-janot.jpg",
-        "linkedin":"https://www.linkedin.com/in/lucas-janot-8ba84a246/"
+      "nome": "Kauan Rodrigues",
+      "curso": "Sistemas de Informação",
+      "cargo": "Diretor de Projetos",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/kauan-barros.jpg",
+      "linkedin": "https://www.linkedin.com/in/kaurodri"
     },
     {
-        "nome":"Pedro Trevisan",
-        "curso":"Sistemas de Informação",
-        "cargo":"Diretor de Adm/Financeiro", 
-        "diretoria": "diretor",
-        "foto":"../membros/fotos/pedro-trevisan.jpg",
-        "linkedin":"https://www.linkedin.com/in/pedro-trevisan-856278263/"
+      "nome": "Leonardo Andrade",
+      "curso": "Ciência da Computação",
+      "cargo": "Diretor de Adm/Financeiro",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/leonardo-andrade.jpg",
+      "linkedin": "https://www.linkedin.com/in/leonardo-alfaro-895142346/"
     },
     {
-        "nome":"João Caio",
-        "curso":"Ciência da Computação",
-        "cargo":"Diretor de Gestão de Pessoas", 
-        "diretoria": "diretor",
-        "foto":"../membros/fotos/joao-caio.jpg",
-        "linkedin":"https://www.linkedin.com/in/joaocaio/"
+      "nome": "Marcus Arthur",
+      "curso": "Sistemas de Informação",
+      "cargo": "Diretor de Gestão de Pessoas",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/marcus-arthur.jpg",
+      "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
     }
 ]

@@ -14,10 +14,11 @@ function Header(props) {
                     <li className='item'><Link to="/sobre">Quem Somos</Link></li>
                     <li className='item'><Link to="/portfolio">Portfolio</Link></li>
                     <li className='item'><Link to="/#agendar-reuniao">Contato</Link></li>
+                    <li className='item'><Link to="/Explore">Explore+</Link></li>
                 </ul>
             </div>
         </>
     )
 }
 
-export default Header
+export default Header;

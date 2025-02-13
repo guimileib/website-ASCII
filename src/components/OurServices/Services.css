@@ -154,6 +154,24 @@ hide {
     top: 5px;
 }
 
+.pdf-button {
+    border: none;
+    border-radius: 6px;
+    background-color: var(--green);
+    margin: 1rem auto;
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 1rem 2rem;
+    margin-top: 30px;
+    cursor: pointer;
+    color: var(--blue-deep);
+}
+
+.pdf-button:hover {
+    background-color: var(--green-hover);
+}
+
 @keyframes show {
     100% {
       opacity: 1;

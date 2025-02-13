@@ -1,53 +1,265 @@
-.agendarReuniao {
-    background-color: white;
-    padding: 4% 15%;
+.contact-container {
     display: flex;
-    justify-content: space-between;
-    gap: 3em;
-    text-align: left;
-    box-shadow: 2px 4px 8px 5px rgba(0, 0, 0, 0.1);
-
-    button a {
-        color: white;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
 }
 
-.agendarReuniao__text {
-    width: 60%;
-
-    h3 {
-        color: var(--blue-dark);
-        font-family: var(--font-main);
-        font-weight: 700;
-        font-size: 2em;
-    }
-
-    p {
-        margin: 1em 0;
-    }
+.contact-container > h2 {
+    font-weight: 800;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-.agendarReuniao__link  {
+.contact-container > p {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*Div maior*/
+.contact-content {
+
+    max-width: 800px;
+    box-shadow: 0 4px 8.5px rgba(0, 0, 0, 0.25); /* Deslocamento X, Y, Desfoque e Cor */
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Informações de contato */
+
+.contact-info-container {
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat alternates', sans-serif;
+    color: white;
+    background: linear-gradient(180deg, #061380 24%, #040A3D 100%);
+    position: relative;
+    z-index: 1; /* Mantém o texto acima do fundo */
+    overflow: hidden;
+}
+
+.contact-info-container::before {
+    content: "";
+    position: absolute;
+    bottom: -100px; /* Ajuste para alinhar os pontos */
+    right: -70px;
+    width: 350px; /* Ajuste conforme necessário */
+    height: 350px;
+    background: url('/src/image/mapa-fundo.svg') no-repeat center;
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1; 
+}
+
+.contact-info-container h3{
+    font-size: 20px;
+}
+
+.contact-info-container p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.contact-info-container img {
+    width: 30px;
+}
+
+.contact-details {
+    margin: 60px 0;
+}
+
+.contact-item {
     display: flex;
     align-items: center;
-    gap: 0.5em;
-    margin: 1em 0;
-    text-decoration: none;
-    color: var(--black);
-
-    img {
-        height: 1.7em;
-        width: auto;
-    }
+    gap: 15px;
+    margin: 30px 0;
 }
 
-@media screen and (max-width: 1000px) {
-    .agendarReuniao {
-        display: block;
+.contact-item > a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+a:active, a:focus, a:visited {
+    color: inherit; /* Mantém a cor original */
+    text-decoration: none; /* Remove sublinhado, se necessário */
+    outline: none; /* Remove contorno azul/padrão */
+  }
+
+.social-media-container {
+    display: flex;
+    gap: 15px;
+}
+
+/*Fomulário*/
+
+.contact-form {
+    padding: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container label + input*/
+.input-container {
+    display: flex;
+    flex-direction: column-reverse; /* Inverte a ordem para o label ficar acima */
+}
+
+/*Configuração texto label*/
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    color: #8D8D8D;
+}
+
+/*Configuração linha input*/
+
+textarea {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12px;
+    resize: none; /* Impede que o usuário redimensione manualmente */
+    overflow-y: hidden; /* Remove a barra de rolagem até ser necessário */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+input, textarea {
+    border: none;
+    border-bottom: 2px solid #8D8D8D;
+    padding: 8px 0;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--blue-dark); /* Muda a cor da borda ao focar */
+}
+
+input.filled, textarea.filled {
+    border-bottom: 2px solid var(--blue-dark);
+  }
+
+/*Muda a cor do label quando estiver em for preenchido*/
+.input-container input:focus ~ .label,
+.input-container textarea:focus ~ .label,
+.label.active {
+      color: var(--blue-dark);
+      font-weight: 600;
+  }
+
+/*Assunto*/
+
+.radio-container p {
+    font-weight: 600;
+    color: var(--blue-dark);
+}
+
+.radio-label {
+    margin: 0;
+}
+
+.radio-group  {
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+}
+
+.radio-group > label {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-label.selected {
+    color: black;
+    font-weight: 500;
+}
+
+/* Oculta o radio padrão */
+.radio-label input {
+    display: none;
+}
+
+/* Criando a bolinha externa */
+.custom-radio {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s;
+}
+
+/* Adiciona a bolinha interna quando selecionado */
+.radio-label input:checked + .custom-radio::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--blue-dark);
+    border-radius: 50%;
+}
+
+/* Muda a borda da bolinha quando selecionado */
+.radio-label input:checked + .custom-radio {
+    border-color: var(--blue-dark);
+}
+
+.container-button {
+    display: flex;
+    justify-content: right;
+}
+
+.button {
+    border: none;
+    border-radius: 6px;
+    background-color: var(--blue-dark);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 1em 1.3em;
+    width: 200px;
+    margin: 15px 0;
+}
+
+.nomeEmail {
+    display: flex;
+    gap: 30px;
+}
+
+.confirmation-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+
+    .nomeEmail {
+        display: flex;
+        flex-direction: column;
     }
 
-    .agendarReuniao__text {
-        width: 100%;
-        margin-bottom: 2em;
+    .radio-group {
+        flex-wrap: wrap;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-self: stretch; 
     }
 }

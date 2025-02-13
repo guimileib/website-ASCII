@@ -1,0 +1,28 @@
+.linkContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 2rem 7rem;
+    text-align: center;
+
+    a{
+        color: #061380;
+        font-weight: 600;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1517px) {
+    .linkContainer{
+        margin: 2rem 8rem;
+    }
+}
+
+@media (max-width: 1096px){
+    .linkContainer{
+        justify-content: center;
+    }
+}

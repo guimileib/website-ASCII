@@ -24,6 +24,7 @@ export default function BurguerMenu(props) {
                         <li><Link to="/sobre/#">Sobre Nós</Link></li>
                         <li><Link to="/#agendar-reuniao">Contato</Link></li>
                         <li><Link to="/portfolio/#">Portfolio</Link></li>
+                        <li ><Link to="/Explore">Explore+</Link></li>
                     </ul>
                 </div>
             </div>    
