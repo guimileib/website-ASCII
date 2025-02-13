@@ -26,6 +26,8 @@ function EbooksLibrary() {
     */
 
     return (
+        <>
+         <div id="Bibliotecaebooks-anchor"></div>
         <div className={styles.libraryContainer}>
             <div className={styles.libraryTitle}>
                 <h2>Biblioteca de</h2>
@@ -51,6 +53,7 @@ function EbooksLibrary() {
                 ))}
             </div>
         </div>
+        </>
     );
 }
 

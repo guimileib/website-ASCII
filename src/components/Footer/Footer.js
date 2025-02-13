@@ -30,8 +30,8 @@ function Footer() {
           <ul>
             <li><Link to="/portfolio/#portfolio-anchor">Portfolio</Link></li>
             <li><Link to="/sobre/#sobre-anchor">Quem Somos</Link></li>
-            <li><span className="inactive-link">Explore+</span></li>
-            <li><span className="inactive-link">Contato</span></li>
+            <li><Link to="/Explore">Explore+</Link></li>
+            <li><Link to="/#agendar-reuniao">Contato</Link></li>
           </ul>
         </div>
       </div>

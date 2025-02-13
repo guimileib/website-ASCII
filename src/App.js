@@ -14,6 +14,8 @@ import Members from 'pags/Members.js';
 import Uberground from 'pags/Uberground';
 import JusConsultoria from 'pags/JusConsultoria'
 import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
+import Explore from "pags/Explore";
+import Bibliotecaebooks from "pags/Bibliotecaebooks";
 
 
 
@@ -28,6 +30,8 @@ function App() {
         <Route path="/membros" element={<Members />} />
         <Route path="/portfolio/uberground" element={<Uberground />} />
         <Route path="/portfolio/jus-consultoria" element={<JusConsultoria />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/Bibliotecaebooks" element={<Bibliotecaebooks />} />
       </Routes>
       <Footer />
     </Router>

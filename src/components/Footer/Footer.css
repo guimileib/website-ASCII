@@ -29,6 +29,7 @@
 
   p {
     margin: 0;
+    padding-bottom: 15px;
   }
 }
 
@@ -78,7 +79,7 @@
 
 .footer__divider-wrapper {
   position: absolute;
-  top: -56px;
+  top: -55px;
   left: 0;
   width: 100%;
   z-index: 0;
@@ -87,6 +88,7 @@
 .inactive-link {
   color: var(--green-hover);
 }
+
 
 @media screen and (max-width: 800px) {
   .footer {

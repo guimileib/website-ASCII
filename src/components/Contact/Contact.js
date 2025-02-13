@@ -2,6 +2,7 @@ import './Contact.css';
 import { useState, useRef, useEffect } from 'react';
 import InputMask from "react-input-mask";
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 import emailIcon from 'image/email.png';
 import whatsappIcon from 'image/whatsapp.png';
@@ -12,30 +13,58 @@ import githubIcon from 'image/github.png';
 
 export default function Contact() {
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
-    const [telefone, setTelefone] = useState('')
-    const [assunto, setAssunto] = useState("Orçamento");
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [assunto, setAssunto] = useState('Orçamento');
     const [isFocused, setIsFocused] = useState(false);
+    const [confirmationMessage, setConfirmationMessage] = useState('');
     const textareaRef = useRef(null);
 
-      // Função para ajustar a altura automaticamente
+    function sendEmail(e) {
+        e.preventDefault();
+
+        const templateParams = {
+            from_name: "Formulário Site ASCII",
+            name,
+            message,
+            email,
+            telefone,
+            assunto
+        };
+
+        emailjs.send("service_rvoi3gy", "template_h0wix3o", templateParams, "_AzRDYavKUnikg3Af")
+        .then((response) => {
+            console.log("EMAIL ENVIADO", response.status, response.text);
+            setConfirmationMessage("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+            
+            setName('');
+            setEmail('');
+            setMessage('');
+            setTelefone('');
+            setAssunto('');
+            
+            setTimeout(() => setConfirmationMessage(''), 10000);
+        }, (erro) => {
+            console.log("ERRO", erro);
+            setConfirmationMessage("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+        });
+    }
+
     useEffect(() => {
         if (textareaRef.current) {
-        textareaRef.current.style.height = "auto"; // Redefine a altura
-        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Ajusta conforme o conteúdo
+            textareaRef.current.style.height = "auto";
+            textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
         }
-    }, [message]); // Atualiza sempre que o texto mudar
+    }, [message]);
 
     return (
         <section className='contact-container' id="agendar-reuniao">
-
-                <h2>Agende uma reunião!</h2>
-                <p>Saiba como nossa equipe pode ajudar a sua empresa!</p>
-                
+            <h2>Agende uma reunião!</h2>
+            <p>Saiba como nossa equipe pode ajudar a sua empresa!</p>
+            
             <div className='contact-content'>
-
                 <div className='contact-info-container'>
                     <h3>Informações de Contato</h3>
                     <p>Fale conosco! Estamos à disposição para atender você.</p>
@@ -63,7 +92,8 @@ export default function Contact() {
                 </div>
                 
                 <div className='contact-form'>
-                    <form className="form" onSubmit={() => {}}>
+                    <form className="form" onSubmit={sendEmail}>
+
                         <div className="input-container">
                             <input 
                                 className={name ? "filled" : ""}
@@ -77,7 +107,7 @@ export default function Contact() {
                             <label className={name || isFocused ? "label active" : "label"}>Nome</label>
                         </div>
                         
-                        <div class="nomeEmail">
+                        <div className="nomeEmail">
                             <div className="input-container">
                                 <input
                                     className={email ? "filled" : ""}
@@ -113,13 +143,14 @@ export default function Contact() {
                                             value={item}
                                             checked={assunto === item}
                                             onChange={(e) => setAssunto(e.target.value)}
+                                            required
                                         />
                                         <span className="custom-radio"></span> {item}
                                     </label>
                                 ))}
                             </div>
                         </div>
-
+                        
                         <div className="input-container">
                             <textarea
                                 ref={textareaRef}
@@ -129,16 +160,14 @@ export default function Contact() {
                                 value={message}
                                 required
                             />
-                            <label className={message || isFocused ? "label active" : "label"}>Mensagem</label>
                         </div>
                         
-                        <div class="container-button">
-                            <input className="button" type="submit" value="Enviar mensagem"  />
+                        <div className="container-button">
+                            <input className="button" type="submit" value="Enviar mensagem" />
                         </div>
-                        
+                        {confirmationMessage && <p className="confirmation-message">{confirmationMessage}</p>}
                     </form>
                 </div>
-
             </div>
         </section>
     );

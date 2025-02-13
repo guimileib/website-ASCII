@@ -239,6 +239,14 @@ input.filled, textarea.filled {
     gap: 30px;
 }
 
+.confirmation-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
 @media (max-width: 768px) {
 
     .nomeEmail {

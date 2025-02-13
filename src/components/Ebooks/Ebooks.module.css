@@ -1,7 +1,9 @@
 .linkContainer{
     display: flex;
     justify-content: flex-end;
+    align-items: end;
     margin: 2rem 7rem;
+    text-align: center;
 
     a{
         color: #061380;

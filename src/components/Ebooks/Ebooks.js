@@ -1,6 +1,7 @@
 import React from 'react';
 import styles2 from 'components/Ebooks/Ebooks.module.css';
 import styles from 'components/EbooksLibrary/EbooksLibrary.module.css';
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Imagens
 import imagemEbook from 'image/ebook-default.png'
@@ -19,7 +20,7 @@ function Ebooks(){
                 <h2 className={styles.titleHighlight}>eBooks</h2>
             </div>
             <div className={styles2.linkContainer}>
-                <a href=''>Ver todos</a>
+                <Link to="/Bibliotecaebooks">Ver todos</Link>
             </div>
             <div className={styles.ebooksContainer}>
             {ebooks.map((ebook, index) => (

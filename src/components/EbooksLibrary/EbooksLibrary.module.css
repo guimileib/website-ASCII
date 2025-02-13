@@ -20,8 +20,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     justify-items: center;
-    background-color: white;
-    margin: 2.5rem 6rem;
+    margin: 0 2rem  6rem 2rem;
 
     .ebook {
         background-color: #050F60;
@@ -36,7 +35,6 @@
         overflow: visible;
 
         .ebookContent {
-            display: flex;
             align-items: center;
             gap: 1rem;
         
@@ -137,9 +135,7 @@
 }
 
 @media (max-width: 550px) {
-    .libraryContainer{
-        margin: 0.4rem 0.5rem;
-    }
+
     .ebookBlue, .ebookGreen{
         min-width: 200px;
     }
