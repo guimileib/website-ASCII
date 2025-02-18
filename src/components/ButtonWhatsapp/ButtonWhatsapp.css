@@ -1,0 +1,40 @@
+.botaoWhatsapp{
+    margin: 25px 3px;
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    transition: background-image 0.5s ease-in-out, width 0.3s, height 0.3s;
+        
+}
+
+.botaoWhatsapp:hover{
+    transform: scale(1.03);
+}
+
+.botaoWhatsapp img{
+    display: block;
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+}
+
+@media  screen and (max-width: 1300px)  {
+    .botaoWhatsapp{
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        background-image: url("../../image/botaoWhatsapp2.png"); /* Imagem padrão */
+        background-size: cover;
+        background-position: center;
+    }
+    .botaoWhatsapp img{
+        display: none;
+    }
+}

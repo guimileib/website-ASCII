@@ -1,7 +1,6 @@
-
 .project_card {
     box-sizing: border-box;
-    width: 344px ;
+    width: 340px ;
     margin-top: 8px;
     border-radius: 8px;
     box-shadow: 0px 0px 16px #b8b8b8;
@@ -17,12 +16,14 @@
     }
 
     button {
-        padding: 8px 16px;
+        font-size: 15px;
+        padding: 16px 24px;
         color: black;
         background-color: var(--silver);
         border: none;
         border-radius: 8px;
-        margin: 8px 0 0 60%;
+        margin: 0px 0 0 60%;
+        height: auto;
         transition: all 0.08s;
     }
 
@@ -35,7 +36,7 @@
 
 .project_text {
     padding: 0 32px;
-    height: 40%;
+    height: 38%;
 
     h5 {
         color: var(--blue-light);
@@ -50,8 +51,10 @@
     }
 
     p {
+        text-align: start;
         font-size: 16px;
         margin: 0px;
+        line-height: 1.4;
     }
 }
 
@@ -59,13 +62,4 @@ button .off {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
-    .project_card {
-        button {
-            display: block;
-            width: 90%;
-            margin: 8px auto;
-            padding: 8px 20px;
-        }
-    }
-}
+

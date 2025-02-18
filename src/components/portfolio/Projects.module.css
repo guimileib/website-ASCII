@@ -1,5 +1,6 @@
 .portfolio {
     margin-top: 2rem;
+    width: 85%;
 }
 
 .titles {
@@ -27,6 +28,7 @@
 
 .projects_wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
 }
 

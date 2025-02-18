@@ -3,6 +3,7 @@ import Header from "../components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import Ebooks from "../components/Ebooks/Ebooks";
 import TitleBanner from 'components/TitleBanner/TitleBanner.js';
+import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
 function Explore() {
 
@@ -14,6 +15,7 @@ function Explore() {
         <>  
             <BurguerMenu theme='light'/>
             <Header theme='dark'/>
+            <ButtonWhatsapp/>
             <TitleBanner title='Explore+' image=''/>
             <Ebooks/>
         </>
