@@ -5,6 +5,7 @@ import Header from "components/Header/Header.js";
 import BurguerMenu from 'components/BurguerMenu/BurguerMenu.js';
 import MembersCarousel from 'components/MembersCarousel/MembersCarousel.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
+import LinhaTempo from 'components/LinhaTempo/LinhaTempo';
 
 export default function AboutUs() {
     return (
@@ -15,6 +16,7 @@ export default function AboutUs() {
             <ButtonWhatsapp/>
             <Banner title="Sobre Nós" id="about-us__banner-img" image={AboutUsImg}/>
             <Content />
+            <LinhaTempo/>
         </>
     );
 }

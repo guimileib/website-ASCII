@@ -76,11 +76,14 @@ export default function Contact() {
                         </div>
                         <div className="contact-item">
                             <img src={emailIcon} alt="Email" />
-                            <a target="_blank" rel="noopener noreferrer" href="mailto:ascii@gmail.com">ascii@gmail.com</a>
+                            <div class="email">
+                                <a target="_blank" rel="noopener noreferrer" href="mailto:comercial@asciiej.com.br">comercial@asciiej.com.br</a>
+                                <a target="_blank" rel="noopener noreferrer" href="mailto:empresajunior@asciiej.com.br">empresajunior@asciiej.com.br</a>
+                            </div>
                         </div>
                         <div className="contact-item">
                             <img src={addressIcon} alt="Endereço" />
-                            <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/ng1t8887m4m9fh2F9">Universidade Federal de Uberlândia, Bloco 1B, Uberlândia - MG</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/ng1t8887m4m9fh2F9">Av. João Naves de Ávila, 2121 - Santa Mônica, Bloco 1B, Sala 201A, Univesidade Federal de Uberlândia</a>
                         </div>
                     </div>
                     

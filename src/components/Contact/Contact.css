@@ -87,6 +87,22 @@
     line-height: 1.5;
 }
 
+.email > a{
+    display: flex;
+
+    color: inherit; /* Mantém a cor original */
+    text-decoration: none; /* Remove sublinhado, se necessário */
+    outline: none; /* Remove contorno azul/padrão */
+    color: white !important;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
 a:active, a:focus, a:visited {
     color: inherit; /* Mantém a cor original */
     text-decoration: none; /* Remove sublinhado, se necessário */

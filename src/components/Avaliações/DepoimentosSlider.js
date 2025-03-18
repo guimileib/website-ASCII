@@ -6,6 +6,9 @@ import "swiper/css/navigation";
 import "./DepoimentosSlider.css"; // Arquivo de estilos
 
 import logoConstru from "image/constru.webp"
+import logogeophotos from "image/geophotos.jpg"
+import logoattworks from "image/wattworks-logo.png"
+import logoinnovare from "image/innovare-logo.png"
 
 const depoimentos = [
   {
@@ -16,21 +19,21 @@ const depoimentos = [
   },
   {
     id: 2,
-    texto: "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.",
-    nome: "Nome",
-    imagem: "https://via.placeholder.com/50",
+    texto: "Fiquei impressionado com a qualidade do atendimento, com comunicação excelente e um profundo entendimento do meu problema. Além disso, cumpriram rigorosamente os prazos, demonstrando profissionalismo.",
+    nome: "geophotos",
+    imagem: logogeophotos,
   },
   {
     id: 3,
-    texto: "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.",
-    nome: "Nome",
-    imagem: "https://via.placeholder.com/50",
+    texto: "Atendimento excelente! Sempre solícitos e prontos para atender às nossas solicitações, fazendo as alterações necessárias com rapidez e eficiência. Muito satisfeita!",
+    nome: "wattworks",
+    imagem: logoattworks,
   },
   {
     id: 4,
-    texto: "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo.",
-    nome: "Nome",
-    imagem: "https://via.placeholder.com/50",
+    texto: "Ótimo serviço, pontuais, muito atenciosos, didáticos e preocupados com todos os processos do trabalho! Com certeza escolheremos a empresa para outros projetos futuros!",
+    nome: "Innovare Jr.",
+    imagem: logoinnovare,
   },
 ];
 
