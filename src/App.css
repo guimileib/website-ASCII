@@ -18,6 +18,7 @@
   /* Effects */
   --blue-gradient: linear-gradient(144deg, rgba(6,19,128,1) 0%, rgba(4,10,61,1) 97%);
   --box-shadow: 0px 0px 16px #b8b8b8;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   /* Typhography */
   font-family: 'Montserrat', sans-serif;
