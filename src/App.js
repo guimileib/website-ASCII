@@ -18,6 +18,8 @@ import Constru from 'pags/Constru'
 import MembrosCarousel from 'components/MembersCarousel/MembersCarousel';
 import Explore from "pags/Explore";
 import Bibliotecaebooks from "pags/Bibliotecaebooks";
+import Asciiplay from 'pags/Asciiplay';
+
 
 
 
@@ -36,6 +38,7 @@ function App() {
         <Route path="/portfolio/constru" element={<Constru/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/Bibliotecaebooks" element={<Bibliotecaebooks />} />
+        <Route path="/Asciiplay" element={<Asciiplay />} />
       </Routes>
       <Footer />
     </Router>

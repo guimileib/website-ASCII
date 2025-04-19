@@ -1,0 +1,81 @@
+.carouselWrapper {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.carouselHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.carouselTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #040A3D;
+  text-align: center;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.carousel {
+  position: relative;
+  padding: 0 40px;
+}
+
+.mySwiper {
+  margin: 0 8%;
+  padding: 20px 0;
+}
+
+
+.subtitle {
+  display: block; /* Isso força quebra de linha */
+  margin-top: 0.5em; /* espaço opcional */
+}
+
+.linkContainer{
+  display: flex;
+  justify-content: end;
+  margin: 0rem 10%;
+
+  a{
+    color: #061380;
+    font-weight: 600;
+  }
+
+  a:hover{
+      text-decoration: underline;
+  }
+
+  a:visited {
+    color: #061380;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .mySwiper {
+    margin: 0;
+  }
+
+  .carousel {
+    padding: 0;
+  }
+
+}
+
+.mySwiper {
+  transform-style: none !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .linkContainer {
+    justify-content: center;
+  }
+}

@@ -28,6 +28,7 @@ html,body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100vw;
+  background: transparent;
 }
 
 h1 {
@@ -83,4 +84,8 @@ section {
 
 a {
   text-decoration: none;
+}
+.swiper-3d,
+.swiper-wrapper {
+  transform-style: none !important;
 }

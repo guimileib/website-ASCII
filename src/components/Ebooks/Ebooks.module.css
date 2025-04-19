@@ -1,8 +1,8 @@
 .linkContainer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     align-items: end;
-    margin: 2rem 7rem;
+    margin: 2rem 3%;
     text-align: center;
 
     a{
@@ -13,15 +13,15 @@
     a:hover{
         text-decoration: underline;
     }
-}
 
-@media (max-width: 1517px) {
-    .linkContainer{
-        margin: 2rem 8rem;
+    a:visited {
+        color: #061380;
     }
+
+    
 }
 
-@media (max-width: 1096px){
+@media (max-width: 768px){
     .linkContainer{
         justify-content: center;
     }

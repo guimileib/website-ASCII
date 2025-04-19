@@ -10,6 +10,7 @@ import DepoimentosSlider from 'components/Avaliações/DepoimentosSlider.js';
 import ButtonWhatsapp from 'components/ButtonWhatsapp/ButtonWhatsapp.js';
 
 
+
 function Home() {
   return (
     <>
