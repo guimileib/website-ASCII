@@ -1,40 +1,37 @@
-import { useState } from 'react';
-import './ExperimentCard.css';
-import {
-  Webchat,
-  WebchatProvider,
-  getClient,
-} from '@botpress/webchat';
-import './KowalskiCard.css';
+import { useState } from "react";
+import "./ExperimentCard.css";
+import { Webchat, WebchatProvider, getClient } from "@botpress/webchat";
+import "./KowalskiCard.css";
 
-const clientId = "e81840f4-9e3d-4eaa-8e4a-6fd1a7a9b9ff";
+const clientId = "9d7b0ccd-92fb-4597-9545-75939e121dc2";
 
 const KowalskiCard = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isWebchatOpen, setIsWebchatOpen] = useState(false);
-  
+
   const client = getClient({
     clientId,
   });
-  
+
   const configuration = {
-    color: '#00FF00',
-    botName: 'Kowalski IA',
-    botConversationDescription: 'Assistente da ASCII Empresa Junior',
+    color: "#00FF00",
+    botName: "Kowalski IA",
+    botConversationDescription: "Assistente da ASCII Empresa Junior",
     useSessionStorage: true,
     messagingUrl: "https://messaging.botpress.cloud",
     composerPlaceholder: "Fale com o Kowalski IA...",
     avatarUrl: "/kowalski.png",
-    stylesheet: "https://webchat-styler-css.botpress.app/prod/code/7d97d93a-d91e-4e5e-a98c-81afba7c4ddd/v31331/style.css",
+    stylesheet:
+      "https://webchat-styler-css.botpress.app/prod/code/7d97d93a-d91e-4e5e-a98c-81afba7c4ddd/v31331/style.css",
   };
 
   const toggleWebchat = () => {
-    setIsWebchatOpen(prevState => !prevState);
+    setIsWebchatOpen((prevState) => !prevState);
     // Toggle body scroll when chat is open/closed
     if (!isWebchatOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
   };
 
@@ -45,8 +42,8 @@ const KowalskiCard = () => {
 
   return (
     <WebchatProvider client={client} configuration={configuration}>
-      <div 
-        className={`experiment-card ${isHovered ? 'hovered' : ''}`}
+      <div
+        className={`experiment-card ${isHovered ? "hovered" : ""}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={toggleWebchat}
@@ -57,29 +54,39 @@ const KowalskiCard = () => {
         <div className="card-content">
           <h3>Kowalski IA</h3>
           <p>
-            Converse com o Kowalski, a inteligência artificial da ASCII. 
-            Tire suas dúvidas sobre nossos projetos e serviços.
+            Converse com o Kowalski, a inteligência artificial da ASCII. Tire
+            suas dúvidas sobre nossos projetos e serviços.
           </p>
-          <button 
-            className="experiment-link" 
-            onClick={handleButtonClick}
-          >
+          <button className="experiment-link" onClick={handleButtonClick}>
             Iniciar Conversa
           </button>
         </div>
       </div>
-      
+
       {/* Overlay */}
-      {isWebchatOpen && <div className="chat-overlay" onClick={toggleWebchat}></div>}
-      
+      {isWebchatOpen && (
+        <div className="chat-overlay" onClick={toggleWebchat}></div>
+      )}
+
       {/* Botpress Webchat */}
-      <div className="kowalski-webchat-container" style={{ display: isWebchatOpen ? 'flex' : 'none' }}>
+      <div
+        className="kowalski-webchat-container"
+        style={{ display: isWebchatOpen ? "flex" : "none" }}
+      >
         <div className="webchat-header">
-          <img src="/kowalski.png" alt="Kowalski IA" className="webchat-avatar" />
+          <img
+            src="/kowalski.png"
+            alt="Kowalski IA"
+            className="webchat-avatar"
+          />
           <h3>Kowalski IA</h3>
           <div className="webchat-controls">
-            <button className="minimize-webchat" onClick={toggleWebchat}>_</button>
-            <button className="close-webchat" onClick={toggleWebchat}>×</button>
+            <button className="minimize-webchat" onClick={toggleWebchat}>
+              _
+            </button>
+            <button className="close-webchat" onClick={toggleWebchat}>
+              ×
+            </button>
           </div>
         </div>
         <div className="webchat-content">
@@ -90,4 +97,4 @@ const KowalskiCard = () => {
   );
 };
 
-export default KowalskiCard; 
+export default KowalskiCard;
