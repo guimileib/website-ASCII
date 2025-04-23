@@ -1,0 +1,84 @@
+.glitch-container {
+  position: relative;
+  display: inline-block;
+  color: var(--primary-color);
+}
+
+.glitch-text {
+  position: relative;
+  z-index: 1;
+}
+
+.glitch-text.active {
+  animation: glitch-skew 0.5s infinite linear alternate-reverse;
+}
+
+.glitch-text.glitch-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  clip-path: rect(0, 900px, 0, 0);
+  transform: translate(-2px, -2px);
+  animation: glitch-top 0.5s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+.glitch-text.glitch-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  clip-path: rect(0, 900px, 5px, 0);
+  transform: translate(2px, 2px);
+  animation: glitch-bottom 0.5s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+/* Low intensity */
+.glitch-text.low .glitch-top {
+  animation-duration: 0.8s;
+  transform: translate(-1px, -1px);
+}
+
+.glitch-text.low .glitch-bottom {
+  animation-duration: 0.8s;
+  transform: translate(1px, 1px);
+}
+
+/* High intensity */
+.glitch-text.high .glitch-top {
+  animation-duration: 0.3s;
+  transform: translate(-3px, -3px);
+}
+
+.glitch-text.high .glitch-bottom {
+  animation-duration: 0.3s;
+  transform: translate(3px, 3px);
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(0deg); }
+  21% { transform: skew(2deg); }
+  22% { transform: skew(0deg); }
+  90% { transform: skew(0deg); }
+  91% { transform: skew(-2deg); }
+  92% { transform: skew(0deg); }
+}
+
+@keyframes glitch-top {
+  0% { clip-path: rect(10px, 900px, 15px, 0); }
+  25% { clip-path: rect(5px, 900px, 10px, 0); }
+  50% { clip-path: rect(15px, 900px, 20px, 0); }
+  75% { clip-path: rect(8px, 900px, 12px, 0); }
+  100% { clip-path: rect(12px, 900px, 18px, 0); }
+}
+
+@keyframes glitch-bottom {
+  0% { clip-path: rect(40px, 900px, 45px, 0); }
+  25% { clip-path: rect(35px, 900px, 40px, 0); }
+  50% { clip-path: rect(45px, 900px, 50px, 0); }
+  75% { clip-path: rect(38px, 900px, 42px, 0); }
+  100% { clip-path: rect(42px, 900px, 48px, 0); }
+} 
