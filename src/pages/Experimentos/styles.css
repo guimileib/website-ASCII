@@ -162,8 +162,6 @@
   padding: 6rem 0;
   background-color: var(--bg-color);
   position: relative;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .experiments-section::before {
@@ -188,10 +186,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
 }
 
 /* Animations */
@@ -255,6 +249,5 @@
   
   .experiments-grid {
     grid-template-columns: 1fr;
-    padding: 0 0.5rem;
   }
 } 

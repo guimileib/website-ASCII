@@ -1,9 +1,9 @@
 import React from 'react';
 import MainLayout from './layouts/MainLayout';
 import Experimentos from './pages/Experimentos';
-import MatrixRain from './components/MatrixRain';
-import ParticleBackground from './components/ParticleBackground';
-import './App.css';
+import MatrixRain from './components/Effects/MatrixRain';
+import ParticleBackground from './components/Effects/ParticleBackground';
+import './styles/App.css';
 
 function App() {
   return (

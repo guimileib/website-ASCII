@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './styles.css';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       
       <div className="footer-content">
         <div className="footer-section">
-          <img src="/images/logo_experiment.png" alt="ASCII Logo" className="footer-logo" />
+          <img src="/images/logo.png" alt="ASCII Logo" className="footer-logo" />
           <p className="footer-tagline">Transformando ideias em código</p>
         </div>
         

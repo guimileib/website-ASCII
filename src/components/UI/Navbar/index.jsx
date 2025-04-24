@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Navbar.css';
+import './styles.css';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('experimentos');
@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src="/images/logo_experiment.png" alt="ASCII Logo" className="logo" />
+        <img src="/images/logo.png" alt="ASCII Logo" className="logo" />
       </div>
       <div className="nav-links">
         <a 
@@ -52,7 +52,7 @@ const Navbar = () => {
               className={activeLink === 'experimentos' ? 'active' : ''}
               onClick={() => setActiveLink('experimentos')}
             >
-              Experimentos 🧪
+              Experimentos
             </a>
           </div>
         </div>

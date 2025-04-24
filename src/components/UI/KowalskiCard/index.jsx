@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./ExperimentCard.css";
+import "./styles.css";
 import { Webchat, WebchatProvider, getClient } from "@botpress/webchat";
-import "./KowalskiCard.css";
 
 const clientId = "9d7b0ccd-92fb-4597-9545-75939e121dc2";
 
@@ -49,7 +48,7 @@ const KowalskiCard = () => {
         onClick={toggleWebchat}
       >
         <div className="card-image">
-          <img src="/kowalski-noted.png" alt="Kowalski IA" />
+          <img src="/kowalski.png" alt="Kowalski IA" />
         </div>
         <div className="card-content">
           <h3>Kowalski IA</h3>

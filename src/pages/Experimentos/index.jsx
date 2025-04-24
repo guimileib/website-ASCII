@@ -1,13 +1,12 @@
 import { useRef, useEffect } from 'react';
-import ExperimentCard from '../components/ExperimentCard';
-import KowalskiCard from '../components/KowalskiCard';
-import TypingText from '../components/TypingText';
-import GlitchText from '../components/GlitchText';
-import './Experimentos.css';
+import ExperimentCard from '../../components/UI/ExperimentCard';
+import KowalskiCard from '../../components/UI/KowalskiCard';
+import TypingText from '../../components/Effects/TypingText';
+import GlitchText from '../../components/Effects/GlitchText';
+import './styles.css';
 
 const Experimentos = () => {
   const earthRef = useRef(null);
-  const experimentsRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +20,6 @@ const Experimentos = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToExperiments = () => {
-    experimentsRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  };
 
   return (
     <div className="experimentos-page">
@@ -44,7 +36,7 @@ const Experimentos = () => {
                 className="hero-typing"
               />
             </div>
-            <button className="iniciar-btn pulse" onClick={scrollToExperiments}>
+            <button className="iniciar-btn pulse">
               Iniciar Experiência
             </button>
           </div>
@@ -87,7 +79,7 @@ const Experimentos = () => {
         </div>
       </section>
 
-      <section className="experiments-section" ref={experimentsRef}>
+      <section className="experiments-section">
         <div className="container">
           <h2><GlitchText text="NOSSOS EXPERIMENTOS" glitchIntensity="low" /></h2>
           <div className="experiments-grid">
