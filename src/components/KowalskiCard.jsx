@@ -3,7 +3,7 @@ import "./ExperimentCard.css";
 import { Webchat, WebchatProvider, getClient } from "@botpress/webchat";
 import "./KowalskiCard.css";
 
-const clientId = "9d7b0ccd-92fb-4597-9545-75939e121dc2";
+const clientId = "316c2781-4069-4c74-8894-299d9b5e75d8";
 
 const KowalskiCard = () => {
   const [isHovered, setIsHovered] = useState(false);
