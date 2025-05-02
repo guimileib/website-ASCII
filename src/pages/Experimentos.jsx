@@ -4,9 +4,8 @@ import KowalskiCard from '../components/KowalskiCard';
 import TypingText from '../components/TypingText';
 import GlitchText from '../components/GlitchText';
 import './Experimentos.css';
-import Experimentos from './Experimentos';
 
-const ExperimentosPage = () => {
+const Experimentos = () => {
   const earthRef = useRef(null);
   const experimentsRef = useRef(null);
 
@@ -101,4 +100,4 @@ const ExperimentosPage = () => {
   );
 };
 
-export default ExperimentosPage; 
+export default Experimentos; 

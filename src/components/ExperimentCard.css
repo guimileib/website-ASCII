@@ -3,9 +3,7 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 320px;
-  max-width: 300px;
-  margin: 0 auto;
+  height: 350px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--gray);
@@ -38,8 +36,8 @@
 }
 
 .experiment-card.hovered {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 255, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.15);
   border-color: var(--primary-color);
 }
 
@@ -79,16 +77,10 @@
 
 .card-image {
   width: 100%;
-  height: 170px;
+  height: 200px;
   overflow: hidden;
   position: relative;
-<<<<<<< HEAD
   max-width: 100%;
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center;
->>>>>>> 802c57e (🙏)
 }
 
 .card-image::after {
@@ -105,26 +97,19 @@
 }
 
 .card-image img {
-<<<<<<< HEAD
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: transform 0.5s;
   max-width: 100%;
-=======
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  transition: transform 0.3s;
->>>>>>> 802c57e (🙏)
 }
 
 .experiment-card:hover .card-image img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .card-content {
-  padding: 1rem;
+  padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -133,9 +118,9 @@
 }
 
 .card-content h3 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-color);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   position: relative;
   display: inline-block;
 }
@@ -157,17 +142,16 @@
 
 .card-content p {
   color: var(--text-color);
-  font-size: 0.85rem;
-  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
   flex: 1;
-  line-height: 1.3;
 }
 
 .experiment-link {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--bg-color) !important;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   text-align: center;
   font-weight: bold;
@@ -176,7 +160,6 @@
   margin-top: auto;
   position: relative;
   overflow: hidden;
-  font-size: 0.85rem;
 }
 
 .experiment-link::before {
@@ -194,7 +177,7 @@
 .experiment-link:hover {
   background-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 255, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
 }
 
 .experiment-link:active {

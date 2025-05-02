@@ -1,77 +1,12 @@
 :root {
+  --primary-color: #00FF00;
+  --primary-dark: #00CC00;
   --bg-color: #000000;
-  --text-color: #f8f8f8;
-  --primary-color: #00ff00;
-  --primary-dark: #009900;
-  --primary-light: #7fff7f;
-  --secondary-color: #5e5e5e;
-  --accent-color: #424242;
-  --border-color: #2a2a2a;
-  --hover-color: #333333;
-  --error-color: #ff5555;
-  --success-color: #55ff55;
-  --container-width: 1200px;
-  --shadow-color: rgba(0, 0, 0, 0.5);
-  --glow-color: rgba(0, 255, 0, 0.7);
-  --penguin-image: url('/kowalski.png');
+  --text-color: #FFFFFF;
+  --gray-dark: #111111;
+  --gray: #333333;
 }
 
-/* Estilos globais para o cabeçalho do Botpress - remover completamente */
-.bpw-header-container,
-[class*="bpw-header"],
-.bpReset.bpHeader,
-div[class*="bp-header"],
-div[class^="bp-header"],
-[data-testid="bpw-header"],
-.bp-widget-header,
-div[data-testid*="header"],
-.bpHeaderContainer,
-div[class*="header-container"],
-div[class$="Header"],
-.bpw-layout > div:first-child,
-.bpw-chat-container > div:first-child {
-  display: none !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  border: none !important;
-  background: transparent !important;
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-  width: 0 !important;
-  pointer-events: none !important;
-  z-index: -9999 !important;
-}
-
-/* Aplicar estilo para o avatar e ocultar qualquer texto dentro dele */
-.bpHeaderContentAvatarFallback,
-[class*="bpAvatar"],
-.bpMessageAvatarFallback {
-  background-image: var(--penguin-image) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  border-radius: 50% !important;
-  border: 2px solid var(--primary-color) !important;
-  box-shadow: 0 0 10px var(--glow-color) !important;
-  overflow: hidden !important;
-}
-
-.bpHeaderContentAvatarFallback *,
-[class*="bpAvatar"] *,
-.bpMessageAvatarFallback * {
-  visibility: hidden !important;
-  color: transparent !important;
-  opacity: 0 !important;
-}
-
-/* Estilos básicos */
 * {
   margin: 0;
   padding: 0;
@@ -79,185 +14,25 @@ div[class$="Header"],
 }
 
 body {
-  font-family: "Fira Code", monospace;
-  background-color: var(--bg-color) !important;
-  background-image: none !important;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 a {
-  color: var(--primary-color);
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--primary-light);
+  color: inherit;
 }
 
 button {
   cursor: pointer;
+  border: none;
   outline: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Barra de rolagem personalizada */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary-dark);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-}
-
-/* Estilos para seleção de texto */
-::selection {
-  background: var(--primary-dark);
-  color: var(--bg-color);
-}
-
-/* Reduzir espaçamento do grid de experimentos */
-.experiments-grid {
-  gap: 18px !important; /* Reduzir o espaçamento entre os cards */
-}
-
-/* Ajustar tamanho global das fontes para ser um pouco menor */
-body, html {
-  font-size: 15px; /* Reduzir tamanho base da fonte de todo o site */
-}
-
-h1 {
-  font-size: 2.2rem !important; /* Reduzir títulos grandes */
-}
-
-h2 {
-  font-size: 1.8rem !important; /* Reduzir subtítulos */
-}
-
-h3 {
-  font-size: 1.1rem !important; /* Reduzir títulos de cards */
-}
-
-p {
-  font-size: 0.9rem !important; /* Reduzir tamanho dos parágrafos */
-  line-height: 1.4 !important; /* Melhorar legibilidade */
-}
-
-/* Reduzir padding em seções para criar layout mais compacto */
-section {
-  padding: 2.5rem 0 !important;
-}
-
 .container {
-  max-width: 1100px !important; /* Reduzir largura máxima do container */
-}
-
-/* Estilos para garantir compatibilidade com o modal do Kowalski */
-.bp-widget-web {
-  pointer-events: auto !important;
-  z-index: 1001 !important;
-}
-
-body .bpReset.bpModalContainer {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* Ajustar botão de enviar para que fique à direita */
-.bpw-send-button {
-  position: relative !important;
-  z-index: 10 !important;
-  pointer-events: auto !important;
-  opacity: 1 !important;
-  right: 0 !important;
-}
-
-/* Remover completamente qualquer efeito matrix ou canvas de fundo */
-canvas.matrix-rain,
-.matrix-rain,
-[class*="matrix"],
-[id*="matrix"] {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  z-index: -9999 !important;
-  height: 0 !important;
-  width: 0 !important;
-  pointer-events: none !important;
-}
-
-/* Garantir um fundo limpo e sólido */
-body::before,
-body::after,
-html::before,
-html::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Remover a imagem de avatar do marquee e o título */
-.bpMessageListMarqueeAvatarFallback,
-[class*="bpMessageListMarqueeAvatar"],
-div[class*="MarqueeAvatar"],
-.bpw-typing-group img,
-[class*="botpress"] [class*="avatar-fallback"],
-[class*="botpress"] [class*="Avatar"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  position: absolute !important;
-  left: -9999px !important;
-  pointer-events: none !important;
-}
-
-.bpMessageListMarqueeTitle,
-[class*="bpMessageListMarqueeTitle"],
-div[class*="MarqueeTitle"],
-[class*="botpress"] [class*="Title"],
-.bpw-typing-group p,
-[class*="typing-indicator"] * {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  position: absolute !important;
-  left: -9999px !important;
-  pointer-events: none !important;
-}
-
-/* Remover também o container inteiro se necessário */
-[class*="bpMessageListMarquee"],
-div[class*="bpMessageList"],
-[class*="typing-indicator"],
-.bpw-typing-group,
-div[class*="Marquee"] {
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

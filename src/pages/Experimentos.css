@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .hero-section {
-  height: 85vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   background-color: var(--bg-color);
@@ -24,8 +24,8 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   color: var(--primary-color);
   position: relative;
 }
@@ -42,13 +42,13 @@
 }
 
 .typing-container {
-  min-height: 5rem;
-  margin-bottom: 1.5rem;
+  min-height: 6rem;
+  margin-bottom: 2rem;
 }
 
 .hero-typing {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.7;
   opacity: 0.9;
 }
 
@@ -56,8 +56,8 @@
   background-color: var(--primary-color);
   color: var(--bg-color);
   border: none;
-  padding: 0.7rem 1.3rem;
-  font-size: 0.9rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
@@ -102,7 +102,7 @@
 }
 
 .earth-image {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   transition: transform 0.3s ease-out;
   filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.3));
@@ -111,7 +111,7 @@
 
 /* About Section */
 .about-section {
-  padding: 4rem 0;
+  padding: 6rem 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   position: relative;
@@ -129,23 +129,23 @@
 }
 
 .about-section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .about-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .about-column p {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.7;
   opacity: 0.8;
-  padding: 1.2rem;
+  padding: 1.5rem;
   background-color: rgba(0, 25, 0, 0.3);
   border-radius: 8px;
   border-left: 3px solid var(--primary-color);
@@ -159,9 +159,11 @@
 
 /* Experiments Section */
 .experiments-section {
-  padding: 4rem 0;
+  padding: 6rem 0;
   background-color: var(--bg-color);
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .experiments-section::before {
@@ -176,26 +178,29 @@
 }
 
 .experiments-section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .experiments-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* Animations */
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.6);
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 8px rgba(0, 255, 0, 0);
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
@@ -207,7 +212,7 @@
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-6px) rotate(2deg);
+    transform: translateY(-10px) rotate(3deg);
   }
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -250,17 +255,6 @@
   
   .experiments-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .typing-container {
-    min-height: 4rem;
-  }
-  
-  .earth-image {
-    max-width: 80%;
+    padding: 0 0.5rem;
   }
 } 

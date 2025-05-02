@@ -2,13 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1.2rem;
+  padding: 1rem 2rem;
   background-color: var(--bg-color);
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid var(--gray);
-  height: 60px;
 }
 
 .logo-container {
@@ -17,14 +16,13 @@
 }
 
 .logo {
-  height: 30px;
+  height: 40px;
   object-fit: contain;
-  transform: scale(0.9);
 }
 
 .nav-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -33,8 +31,6 @@
   font-weight: 500;
   transition: color 0.3s;
   position: relative;
-  font-size: 0.85rem;
-  padding: 0.3rem 0.5rem;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -44,10 +40,10 @@
 .nav-links a.active::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -5px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--primary-color);
 }
 
@@ -60,12 +56,14 @@
   display: none;
   position: absolute;
   background-color: var(--gray-dark);
-  min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 4px;
   top: 100%;
-  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-width: 100%;
+  min-width: 160px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -74,33 +72,11 @@
 
 .dropdown-content a {
   color: var(--text-color);
-  padding: 8px 12px;
+  padding: 6px 8px;
   text-decoration: none;
   display: block;
-  font-size: 0.8rem;
 }
 
 .dropdown-content a:hover {
   background-color: var(--gray);
-}
-
-/* Media query para dispositivos móveis */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.4rem 0.8rem;
-    height: 50px;
-  }
-  
-  .logo {
-    height: 25px;
-  }
-  
-  .nav-links {
-    gap: 0.8rem;
-  }
-  
-  .nav-links a {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
-  }
 } 
