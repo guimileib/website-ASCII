@@ -131,14 +131,12 @@
   }
 }
 
-/* Estilos específicos para o card do Kowalski */
 .experiment-card .card-image img[alt="Kowalski IA"] {
   object-fit: contain;
   padding: 10px;
   background-color: #000;
 }
 
-/* Ajuste para o cabeçalho do chat com a imagem do Kowalski */
 .webchat-header .webchat-avatar[alt="Kowalski IA"] {
   object-fit: contain;
   background-color: #000;
