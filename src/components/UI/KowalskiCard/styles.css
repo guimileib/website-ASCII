@@ -117,13 +117,13 @@
   to { opacity: 1; }
 }
 
-/* Custom styles for bots message bubbles */
+
 :root {
   --chat-bubble-color: var(--primary-color) !important;
   --composer-border-color: var(--primary-color) !important;
 }
 
-/* Media queries for responsive design */
+
 @media (max-width: 768px) {
   .kowalski-webchat-container {
     width: 90%;
