@@ -1,14 +1,15 @@
 :root {
   --main-color: #00ff00; /* Cor principal do site (destaques, botões, bordas) */
-  --background-color: #000000; /* Cor de fundo principal */
-  --surface-color: #111111; /* Cor de superfícies (cards, caixas, etc) */
-  --secondary-surface: #080808; /* Fundo secundário, se necessário */
+  --background-color: rgba(0, 0, 0, 0.8);
+  --surface-color: rgba(17, 17, 17, 0.9);
+  --secondary-surface: rgba(8, 8, 8, 0.5);
   --text-color: #ffffff; /* Cor principal dos textos */
   --secondary-text: #00ff00;
   --tertiary-text: #697569; /* Cor de textos terciários*/
-  --bot-message-bg: #002500; /* Fundo da mensagem do bot */
-  --user-message-bg: #004500; /* Fundo da mensagem do usuário */
-  --border-color: #00ff00; /* Cor padrão das bordas */
+  --bot-message-bg: rgba(0, 37, 0, 0.8);
+  --user-message-bg: rgba(0, 69, 0, 0.8);
+  --border-color: rgba(0, 255, 0, 0.5);
+  --blur-amount: 10px;
 }
 
 .kowalski-webchat-container {
@@ -21,7 +22,7 @@
   height: 75vh;
   max-height: 800px;
   z-index: 1000;
-  background-color: var(--surface-color);
+  background: rgba(17, 17, 17, 0.3);
   border-radius: 12px;
   border: 2px solid var(--border-color);
   box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
@@ -29,6 +30,8 @@
   display: flex;
   flex-direction: column;
   animation: chat-appear 0.3s ease-out;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 @keyframes chat-appear {
@@ -64,7 +67,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 999;
   animation: fade-in 0.3s ease;
 }
@@ -92,6 +97,7 @@
   background-position: center !important;
   color: transparent !important; /* Oculta a letra dentro */
   font-size: 0 !important; /* Garante que o texto não apareça */
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Ocultar o "K" e substituir por uma imagem de pinguim */
@@ -107,6 +113,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Remover o "B" e o círculo verde no meio do chat */
@@ -137,7 +144,7 @@ header.bpw-header,
 .bp-widget-web header,
 div[class*="header"],
 .bpw-floating-header {
-  background-color: var(--background-color) !important;
+  background: rgba(0, 255, 0, 0.15) !important;
   color: var(--main-color) !important;
   border: 2px solid var(--border-color) !important;
   border-top-left-radius: 10px !important;
@@ -148,6 +155,8 @@ div[class*="header"],
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Estilo para o fundo do chat */
@@ -156,9 +165,11 @@ div[class*="bpMessageList"],
 div[class*="MessageList"],
 .bp-widget-web,
 div[class*="bpContainer"] {
-  background-color: var(--secondary-surface) !important;
+  background-color: transparent !important;
   color: var(--main-color) !important;
   border: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
 /* Estilo para a caixa de entrada de texto - remover borda dupla */
@@ -202,19 +213,20 @@ button[class*="sendButton"] {
 }
 
 /* Estilo para mensagens do bot */
-.bpw-from-bot .bpw-chat-bubble,
-div[class*="fromBot"] div[class*="bubble"] {
-  background-color: var(--bot-message-bg) !important;
-  color: var(--text-color) !important;
-  border: 1px solid var(--border-color) !important;
-}
-
-/* Estilo para mensagens do usuário */
-.bpw-from-user .bpw-chat-bubble,
-div[class*="fromUser"] div[class*="bubble"] {
-  background-color: var(--user-message-bg) !important;
-  color: var(--text-color) !important;
-  border: 1px solid var(--border-color) !important;
+.kowalski-webchat-container .bpw-from-bot .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromBot"] div[class*="bubble"],
+.kowalski-webchat-container .bpw-from-user .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromUser"] div[class*="bubble"] {
+  background: rgba(0, 40, 0, 0.95) !important;
+  color: #00ff00 !important;
+  border: 1.5px solid #39ff14 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px #39ff14 !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 2px #39ff14, 0 0 6px #39ff14 !important;
+  backdrop-filter: none !important;
 }
 
 /* Estilo para a data/timestamp */
@@ -351,4 +363,52 @@ button[class*="header-button"]:hover,
 
 .bpComposerInput {
   color: var(--tertiary-text) !important;
+}
+
+.kowalski-webchat-container .bpMessageBlocksBubble {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  background: rgba(0, 40, 0, 0.95) !important;
+  color: #00ff00 !important;
+  border: 1.5px solid #39ff14 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px #39ff14 !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 2px #39ff14, 0 0 6px #39ff14 !important;
+  backdrop-filter: none !important;
+}
+
+.kowalski-webchat-container .bpMessageListMarqueeContainer {
+  display: none !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer {
+  background: rgba(0, 255, 0, 0.15) !important;
+  color: var(--main-color) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.2) !important;
+  padding: 10px 15px !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "Courier New", monospace !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer textarea,
+.kowalski-webchat-container .bpComposerContainer input {
+  background: transparent !important;
+  color: var(--main-color) !important;
+  border: none !important;
+  font-family: "Courier New", monospace !important;
+  font-size: 1rem !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer textarea::placeholder,
+.kowalski-webchat-container .bpComposerContainer input::placeholder {
+  color: var(--main-color) !important;
+  opacity: 1 !important;
 }
