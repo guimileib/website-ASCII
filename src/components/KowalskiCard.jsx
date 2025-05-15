@@ -42,6 +42,39 @@ const KowalskiCard = () => {
           if (header) header.style.display = "none";
         });
 
+        // Adicionar botão de fechar
+        let headerActions = document.querySelector(".bpHeaderContentActions");
+        if (!headerActions) {
+          // Se não existir o container de ações, vamos criar
+          const headerContent = document.querySelector(
+            ".bpHeaderContentContainer"
+          );
+          if (headerContent) {
+            headerActions = document.createElement("div");
+            headerActions.className = "bpHeaderContentActions";
+            headerContent.appendChild(headerActions);
+          }
+        }
+
+        if (headerActions) {
+          // Remover botão existente se houver
+          const existingCloseButton = headerActions.querySelector(
+            ".bpHeaderContentCloseButton"
+          );
+          if (existingCloseButton) {
+            existingCloseButton.remove();
+          }
+
+          const closeButton = document.createElement("button");
+          closeButton.className = "bpHeaderContentCloseButton";
+          closeButton.innerHTML = "×";
+          closeButton.onclick = (e) => {
+            e.stopPropagation();
+            toggleWebchat();
+          };
+          headerActions.appendChild(closeButton);
+        }
+
         // Também substituir o avatar fallback "K" por uma imagem de pinguim
         const avatarFallbacks = document.querySelectorAll(
           ".bpHeaderContentAvatarFallback"
@@ -130,6 +163,31 @@ const KowalskiCard = () => {
     e.stopPropagation();
     toggleWebchat();
   };
+
+  // Adiciona overlay de blur quando o modal do Botpress aparece
+  useEffect(() => {
+    let observer;
+    function addOverlayIfModalAppears() {
+      const modal = document.querySelector(".bpModalDialogContainer");
+      if (modal && !document.querySelector(".bpModalDialogOverlay")) {
+        const overlay = document.createElement("div");
+        overlay.className = "bpModalDialogOverlay";
+        modal.parentNode.insertBefore(overlay, modal);
+      }
+      // Remove overlay se o modal sumir
+      if (!modal && document.querySelector(".bpModalDialogOverlay")) {
+        document.querySelector(".bpModalDialogOverlay").remove();
+      }
+    }
+    observer = new MutationObserver(addOverlayIfModalAppears);
+    observer.observe(document.body, { childList: true, subtree: true });
+    addOverlayIfModalAppears();
+    return () => {
+      if (observer) observer.disconnect();
+      const overlay = document.querySelector(".bpModalDialogOverlay");
+      if (overlay) overlay.remove();
+    };
+  }, []);
 
   return (
     <WebchatProvider client={client} configuration={configuration}>
