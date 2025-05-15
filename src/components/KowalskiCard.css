@@ -1,15 +1,30 @@
 :root {
-  --main-color: #00ff00; /* Cor principal do site (destaques, botões, bordas) */
-  --background-color: rgba(0, 0, 0, 0.8);
-  --surface-color: rgba(17, 17, 17, 0.9);
-  --secondary-surface: rgba(8, 8, 8, 0.5);
-  --text-color: #ffffff; /* Cor principal dos textos */
-  --secondary-text: #00ff00;
-  --tertiary-text: #697569; /* Cor de textos terciários*/
-  --bot-message-bg: rgba(0, 37, 0, 0.8);
-  --user-message-bg: rgba(0, 69, 0, 0.8);
-  --border-color: rgba(0, 255, 0, 0.5);
-  --blur-amount: 10px;
+  /* Cores de interação */
+  --interactive-primary: #00ff00;
+  --interactive-border: rgba(0, 255, 0, 0.5);
+  --interactive-shadow: rgba(0, 255, 0, 0.3);
+  --interactive-glow: #39ff14;
+  
+  /* Cores de fundo */
+  --backdrop-primary: rgba(0, 0, 0, 0.8);
+  --surface-primary: rgba(17, 17, 17, 0.9);
+  --surface-secondary: rgba(8, 8, 8, 0.5);
+  --chat-bot-surface: rgba(0, 37, 0, 0.8);
+  --chat-user-surface: rgba(0, 69, 0, 0.8);
+  
+  /* Cores de texto */
+  --text-primary: #ffffff;
+  --text-highlight: #00ff00;
+  --text-muted: #697569;
+  
+  /* Efeitos visuais */
+  --blur-strength: 10px;
+  
+  /* Dimensões de interação */
+  --action-button-size: 32px;
+  --action-icon-size: 1.7rem;
+  --action-border-radius: 5px;
+  --action-border-width: 1.2px;
 }
 
 .kowalski-webchat-container {
@@ -24,8 +39,8 @@
   z-index: 1000;
   background: rgba(17, 17, 17, 0.3);
   border-radius: 12px;
-  border: 2px solid var(--border-color);
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  border: 2px solid var(--interactive-border);
+  box-shadow: 0 0 30px var(--interactive-shadow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -67,9 +82,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: var(--backdrop-primary);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
   z-index: 999;
   animation: fade-in 0.3s ease;
 }
@@ -85,8 +100,8 @@
 
 /* Custom styling for the chat interface */
 :root {
-  --chat-bubble-color: var(--main-color) !important;
-  --composer-border-color: var(--main-color) !important;
+  --chat-bubble-color: var(--interactive-primary) !important;
+  --composer-border-color: var(--interactive-primary) !important;
 }
 
 /* Custom styles for the chat interface */
@@ -97,7 +112,7 @@
   background-position: center !important;
   color: transparent !important; /* Oculta a letra dentro */
   font-size: 0 !important; /* Garante que o texto não apareça */
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: var(--surface-secondary) !important;
 }
 
 /* Ocultar o "K" e substituir por uma imagem de pinguim */
@@ -113,7 +128,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: var(--surface-secondary) !important;
 }
 
 /* Remover o "B" e o círculo verde no meio do chat */
@@ -145,8 +160,8 @@ header.bpw-header,
 div[class*="header"],
 .bpw-floating-header {
   background: rgba(0, 255, 0, 0.15) !important;
-  color: var(--main-color) !important;
-  border: 2px solid var(--border-color) !important;
+  color: var(--interactive-primary) !important;
+  border: 2px solid var(--interactive-border) !important;
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.2) !important;
@@ -217,11 +232,11 @@ button[class*="sendButton"] {
 .kowalski-webchat-container div[class*="fromBot"] div[class*="bubble"],
 .kowalski-webchat-container .bpw-from-user .bpw-chat-bubble,
 .kowalski-webchat-container div[class*="fromUser"] div[class*="bubble"] {
-  background: rgba(0, 40, 0, 0.95) !important;
-  color: #00ff00 !important;
-  border: 1.5px solid #39ff14 !important;
+  background: var(--chat-bot-surface) !important;
+  color: var(--interactive-primary) !important;
+  border: 1.5px solid var(--interactive-glow) !important;
   border-radius: 8px !important;
-  box-shadow: 0 0 8px #39ff14 !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
   font-family: "Fira Mono", "Courier New", monospace !important;
   font-size: 1rem !important;
   letter-spacing: 0.5px !important;
@@ -359,12 +374,12 @@ button[class*="header-button"]:hover,
 }
 
 .bpHeaderContentActionsIcons {
-  color: #00ff00 !important;
+  color: var(--main-color) !important;
   background: transparent !important;
-  border: 1.2px solid #00ff00 !important;
-  border-radius: 5px !important;
-  width: 32px !important;
-  height: 32px !important;
+  border: var(--action-border-width) solid var(--main-color) !important;
+  border-radius: var(--action-border-radius) !important;
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -377,23 +392,24 @@ button[class*="header-button"]:hover,
 }
 
 .bpHeaderContentActionsIcons[role="button"]:not(svg) {
-  font-size: 1.2rem !important;
+  font-size: var(--action-icon-size) !important;
 }
 
 .bpHeaderContentActionsIcons svg,
 .bpHeaderContentActionsIcons {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  min-height: 32px !important;
-  max-width: 32px !important;
-  max-height: 32px !important;
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
+  min-width: var(--action-button-size) !important;
+  min-height: var(--action-button-size) !important;
+  max-width: var(--action-button-size) !important;
+  max-height: var(--action-button-size) !important;
 }
 
 .bpHeaderContentActionsIcons:hover {
-  background: #00ff00 !important;
-  color: #111 !important;
-  border-color: #00ff00 !important;
+  background: var(--interactive-primary) !important;
+  color: var(--surface-primary) !important;
+  border: var(--action-border-width) solid var(--interactive-glow) !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
 }
 
 .bpHeaderContentActionsIcons * {
@@ -422,12 +438,12 @@ button[class*="header-button"]:hover,
 .bpHeaderContentCloseButton {
   position: relative !important;
   background: transparent !important;
-  color: #00ff00 !important;
-  border: 1.2px solid #00ff00 !important;
-  border-radius: 5px !important;
-  font-size: 1.7rem !important;
-  width: 32px !important;
-  height: 32px !important;
+  color: var(--main-color) !important;
+  border: var(--action-border-width) solid var(--main-color) !important;
+  border-radius: var(--action-border-radius) !important;
+  font-size: var(--action-icon-size) !important;
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -440,9 +456,10 @@ button[class*="header-button"]:hover,
 }
 
 .bpHeaderContentCloseButton:hover {
-  background: #00ff00 !important;
-  color: #111 !important;
-  border-color: #00ff00 !important;
+  background: var(--interactive-primary) !important;
+  color: var(--surface-primary) !important;
+  border: var(--action-border-width) solid var(--interactive-glow) !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
 }
 
 .bpMessageContainer[data-direction="system"] {
@@ -456,11 +473,11 @@ button[class*="header-button"]:hover,
 .kowalski-webchat-container .bpMessageBlocksBubble {
   margin-top: 16px !important;
   margin-bottom: 16px !important;
-  background: rgba(0, 40, 0, 0.95) !important;
-  color: #00ff00 !important;
-  border: 1.5px solid #39ff14 !important;
+  background: var(--chat-bot-surface) !important;
+  color: var(--interactive-primary) !important;
+  border: 1.5px solid var(--interactive-glow) !important;
   border-radius: 8px !important;
-  box-shadow: 0 0 8px #39ff14 !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
   font-family: "Fira Mono", "Courier New", monospace !important;
   font-size: 1rem !important;
   letter-spacing: 0.5px !important;
@@ -474,8 +491,8 @@ button[class*="header-button"]:hover,
 
 .kowalski-webchat-container .bpComposerContainer {
   background: rgba(0, 255, 0, 0.15) !important;
-  color: var(--main-color) !important;
-  border: 2px solid var(--border-color) !important;
+  color: var(--interactive-primary) !important;
+  border: 2px solid var(--interactive-border) !important;
   border-radius: 10px !important;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.2) !important;
   padding: 10px 15px !important;
