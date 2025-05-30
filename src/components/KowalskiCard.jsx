@@ -32,126 +32,77 @@ const KowalskiCard = () => {
     // Toggle body scroll when chat is open/closed
     if (!isWebchatOpen) {
       document.body.style.overflow = "hidden";
-
+      
       // Remover cabeçalhos manualmente após um breve delay
       setTimeout(() => {
-        const headers = document.querySelectorAll(
-          ".webchat-header, .bpw-header-container, .bpw-header, .bpw-layout header"
-        );
-        headers.forEach((header) => {
-          if (header) header.style.display = "none";
+        const headers = document.querySelectorAll('.webchat-header, .bpw-header-container, .bpw-header, .bpw-layout header');
+        headers.forEach(header => {
+          if (header) header.style.display = 'none';
         });
-
-        // Adicionar botão de fechar
-        let headerActions = document.querySelector(".bpHeaderContentActions");
-        if (!headerActions) {
-          // Se não existir o container de ações, vamos criar
-          const headerContent = document.querySelector(
-            ".bpHeaderContentContainer"
-          );
-          if (headerContent) {
-            headerActions = document.createElement("div");
-            headerActions.className = "bpHeaderContentActions";
-            headerContent.appendChild(headerActions);
-          }
-        }
-
-        if (headerActions) {
-          // Remover botão existente se houver
-          const existingCloseButton = headerActions.querySelector(
-            ".bpHeaderContentCloseButton"
-          );
-          if (existingCloseButton) {
-            existingCloseButton.remove();
-          }
-
-          const closeButton = document.createElement("button");
-          closeButton.className = "bpHeaderContentCloseButton";
-          closeButton.innerHTML = "×";
-          closeButton.onclick = (e) => {
-            e.stopPropagation();
-            toggleWebchat();
-          };
-          headerActions.appendChild(closeButton);
-        }
-
+        
         // Também substituir o avatar fallback "K" por uma imagem de pinguim
-        const avatarFallbacks = document.querySelectorAll(
-          ".bpHeaderContentAvatarFallback"
-        );
-        avatarFallbacks.forEach((avatar) => {
+        const avatarFallbacks = document.querySelectorAll('.bpHeaderContentAvatarFallback');
+        avatarFallbacks.forEach(avatar => {
           avatar.style.backgroundImage = 'url("/kowalski.png")';
-          avatar.style.backgroundSize = "cover";
-          avatar.style.backgroundPosition = "center";
-          avatar.style.color = "transparent";
-          avatar.style.fontSize = "0";
-          avatar.textContent = ""; // Remover o conteúdo de texto (a letra K)
+          avatar.style.backgroundSize = 'cover';
+          avatar.style.backgroundPosition = 'center';
+          avatar.style.color = 'transparent';
+          avatar.style.fontSize = '0';
+          avatar.textContent = ''; // Remover o conteúdo de texto (a letra K)
         });
-
+        
         // Substituir os avatares das bolhas de mensagem por imagens de pinguim
-        const messageAvatars = document.querySelectorAll(
-          ".bpMessageAvatarFallback"
-        );
-        messageAvatars.forEach((avatar) => {
+        const messageAvatars = document.querySelectorAll('.bpMessageAvatarFallback');
+        messageAvatars.forEach(avatar => {
           avatar.style.backgroundImage = 'url("/kowalski.png")';
-          avatar.style.backgroundSize = "cover";
-          avatar.style.backgroundPosition = "center";
-          avatar.style.color = "transparent";
-          avatar.style.fontSize = "0";
-          avatar.textContent = ""; // Remover o conteúdo de texto
+          avatar.style.backgroundSize = 'cover';
+          avatar.style.backgroundPosition = 'center';
+          avatar.style.color = 'transparent';
+          avatar.style.fontSize = '0';
+          avatar.textContent = ''; // Remover o conteúdo de texto
         });
-
+        
         // Remover o "B" e o círculo verde no meio do chat
         const conversationStartElements = document.querySelectorAll(
-          ".bpMessageListConversationStart, " +
-            ".bpMessageListConversationStartContainer, " +
-            '[class*="bpMessageListConversationStart"], ' +
-            '[class*="ConversationStart"], ' +
-            ".bpMessageListConversationStartAvatar, " +
-            '[class*="ConversationStartAvatar"]'
+          '.bpMessageListConversationStart, ' +
+          '.bpMessageListConversationStartContainer, ' +
+          '[class*="bpMessageListConversationStart"], ' +
+          '[class*="ConversationStart"], ' +
+          '.bpMessageListConversationStartAvatar, ' +
+          '[class*="ConversationStartAvatar"]'
         );
-        conversationStartElements.forEach((element) => {
-          if (element) element.style.display = "none";
+        conversationStartElements.forEach(element => {
+          if (element) element.style.display = 'none';
         });
-
+        
         // Remover o "⚡ by Botpress" do rodapé
         const botpressElements = document.querySelectorAll(
-          ".bpw-powered, " +
-            'div[class*="powered"], ' +
-            '[class*="botpress"], ' +
-            ".bpw-powered-by, " +
-            '[class*="PoweredBy"], ' +
-            ".bp-powered, " +
-            "footer, " +
-            ".bpw-powered-container"
+          '.bpw-powered, ' +
+          'div[class*="powered"], ' +
+          '[class*="botpress"], ' +
+          '.bpw-powered-by, ' +
+          '[class*="PoweredBy"], ' +
+          '.bp-powered, ' +
+          'footer, ' +
+          '.bpw-powered-container'
         );
-        botpressElements.forEach((element) => {
+        botpressElements.forEach(element => {
           if (element) {
-            element.style.display = "none";
-            element.style.visibility = "hidden";
-            element.style.opacity = "0";
-            element.style.height = "0";
-            element.style.width = "0";
-            element.style.margin = "0";
-            element.style.padding = "0";
+            element.style.display = 'none';
+            element.style.visibility = 'hidden';
+            element.style.opacity = '0';
+            element.style.height = '0';
+            element.style.width = '0';
+            element.style.margin = '0';
+            element.style.padding = '0';
             element.remove(); // Tenta remover completamente o elemento
           }
         });
-
+        
         // Também remover qualquer elemento com a classe bpMessageListMarqueeTitle
-        const kowalskiTitles = document.querySelectorAll(
-          ".bpMessageListMarqueeTitle"
-        );
-        kowalskiTitles.forEach((title) => {
-          if (title) title.style.display = "none";
-        });
-
-        // Alterar o texto do h2 do header para "Kowalski"
-        const headerTitles = document.querySelectorAll(".bpHeaderContentTitle");
-        headerTitles.forEach((title) => {
-          if (title && title.tagName === "H2") {
-            title.textContent = "Kowalski";
-          }
+        const kowalskiTitles = document.querySelectorAll('.bpMessageListMarqueeTitle');
+        kowalskiTitles.forEach(title => {
+          if (title) title.style.display = 'none';
         });
       }, 100);
     } else {
@@ -163,31 +114,6 @@ const KowalskiCard = () => {
     e.stopPropagation();
     toggleWebchat();
   };
-
-  // Adiciona overlay de blur quando o modal do Botpress aparece
-  useEffect(() => {
-    let observer;
-    function addOverlayIfModalAppears() {
-      const modal = document.querySelector(".bpModalDialogContainer");
-      if (modal && !document.querySelector(".bpModalDialogOverlay")) {
-        const overlay = document.createElement("div");
-        overlay.className = "bpModalDialogOverlay";
-        modal.parentNode.insertBefore(overlay, modal);
-      }
-      // Remove overlay se o modal sumir
-      if (!modal && document.querySelector(".bpModalDialogOverlay")) {
-        document.querySelector(".bpModalDialogOverlay").remove();
-      }
-    }
-    observer = new MutationObserver(addOverlayIfModalAppears);
-    observer.observe(document.body, { childList: true, subtree: true });
-    addOverlayIfModalAppears();
-    return () => {
-      if (observer) observer.disconnect();
-      const overlay = document.querySelector(".bpModalDialogOverlay");
-      if (overlay) overlay.remove();
-    };
-  }, []);
 
   return (
     <WebchatProvider client={client} configuration={configuration}>
@@ -203,8 +129,8 @@ const KowalskiCard = () => {
         <div className="card-content">
           <h3>Assistente ASCII</h3>
           <p>
-            Converse com nosso assistente de inteligência artificial. Tire suas
-            dúvidas sobre nossos projetos e serviços.
+            Converse com nosso assistente de inteligência artificial. Tire
+            suas dúvidas sobre nossos projetos e serviços.
           </p>
           <button className="experiment-link" onClick={handleButtonClick}>
             Iniciar Conversa
