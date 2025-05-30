@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ExperimentCard.css";
 import { Webchat, WebchatProvider, getClient } from "@botpress/webchat";
 import "./KowalskiCard.css";
@@ -15,14 +15,16 @@ const KowalskiCard = () => {
 
   const configuration = {
     color: "#00FF00",
-    botName: "Kowalski IA",
-    botConversationDescription: "Assistente da ASCII Empresa Junior",
+    botName: "",
+    botConversationDescription: "Assistente ASCII",
     useSessionStorage: true,
     messagingUrl: "https://messaging.botpress.cloud",
-    composerPlaceholder: "Fale com o Kowalski IA...",
+    composerPlaceholder: "Fale com o assistente...",
     avatarUrl: "/kowalski.png",
     stylesheet:
       "https://webchat-styler-css.botpress.app/prod/code/7d97d93a-d91e-4e5e-a98c-81afba7c4ddd/v31331/style.css",
+    showConversationHeader: true,
+    hideWidget: true,
   };
 
   const toggleWebchat = () => {
@@ -30,6 +32,79 @@ const KowalskiCard = () => {
     // Toggle body scroll when chat is open/closed
     if (!isWebchatOpen) {
       document.body.style.overflow = "hidden";
+      
+      // Remover cabeçalhos manualmente após um breve delay
+      setTimeout(() => {
+        const headers = document.querySelectorAll('.webchat-header, .bpw-header-container, .bpw-header, .bpw-layout header');
+        headers.forEach(header => {
+          if (header) header.style.display = 'none';
+        });
+        
+        // Também substituir o avatar fallback "K" por uma imagem de pinguim
+        const avatarFallbacks = document.querySelectorAll('.bpHeaderContentAvatarFallback');
+        avatarFallbacks.forEach(avatar => {
+          avatar.style.backgroundImage = 'url("/kowalski.png")';
+          avatar.style.backgroundSize = 'cover';
+          avatar.style.backgroundPosition = 'center';
+          avatar.style.color = 'transparent';
+          avatar.style.fontSize = '0';
+          avatar.textContent = ''; // Remover o conteúdo de texto (a letra K)
+        });
+        
+        // Substituir os avatares das bolhas de mensagem por imagens de pinguim
+        const messageAvatars = document.querySelectorAll('.bpMessageAvatarFallback');
+        messageAvatars.forEach(avatar => {
+          avatar.style.backgroundImage = 'url("/kowalski.png")';
+          avatar.style.backgroundSize = 'cover';
+          avatar.style.backgroundPosition = 'center';
+          avatar.style.color = 'transparent';
+          avatar.style.fontSize = '0';
+          avatar.textContent = ''; // Remover o conteúdo de texto
+        });
+        
+        // Remover o "B" e o círculo verde no meio do chat
+        const conversationStartElements = document.querySelectorAll(
+          '.bpMessageListConversationStart, ' +
+          '.bpMessageListConversationStartContainer, ' +
+          '[class*="bpMessageListConversationStart"], ' +
+          '[class*="ConversationStart"], ' +
+          '.bpMessageListConversationStartAvatar, ' +
+          '[class*="ConversationStartAvatar"]'
+        );
+        conversationStartElements.forEach(element => {
+          if (element) element.style.display = 'none';
+        });
+        
+        // Remover o "⚡ by Botpress" do rodapé
+        const botpressElements = document.querySelectorAll(
+          '.bpw-powered, ' +
+          'div[class*="powered"], ' +
+          '[class*="botpress"], ' +
+          '.bpw-powered-by, ' +
+          '[class*="PoweredBy"], ' +
+          '.bp-powered, ' +
+          'footer, ' +
+          '.bpw-powered-container'
+        );
+        botpressElements.forEach(element => {
+          if (element) {
+            element.style.display = 'none';
+            element.style.visibility = 'hidden';
+            element.style.opacity = '0';
+            element.style.height = '0';
+            element.style.width = '0';
+            element.style.margin = '0';
+            element.style.padding = '0';
+            element.remove(); // Tenta remover completamente o elemento
+          }
+        });
+        
+        // Também remover qualquer elemento com a classe bpMessageListMarqueeTitle
+        const kowalskiTitles = document.querySelectorAll('.bpMessageListMarqueeTitle');
+        kowalskiTitles.forEach(title => {
+          if (title) title.style.display = 'none';
+        });
+      }, 100);
     } else {
       document.body.style.overflow = "";
     }
@@ -49,12 +124,12 @@ const KowalskiCard = () => {
         onClick={toggleWebchat}
       >
         <div className="card-image">
-          <img src="/kowalski-noted.png" alt="Kowalski IA" />
+          <img src="/kowalski.png" alt="Assistente" />
         </div>
         <div className="card-content">
-          <h3>Kowalski IA</h3>
+          <h3>Assistente ASCII</h3>
           <p>
-            Converse com o Kowalski, a inteligência artificial da ASCII. Tire
+            Converse com nosso assistente de inteligência artificial. Tire
             suas dúvidas sobre nossos projetos e serviços.
           </p>
           <button className="experiment-link" onClick={handleButtonClick}>
@@ -73,22 +148,6 @@ const KowalskiCard = () => {
         className="kowalski-webchat-container"
         style={{ display: isWebchatOpen ? "flex" : "none" }}
       >
-        <div className="webchat-header">
-          <img
-            src="/kowalski.png"
-            alt="Kowalski IA"
-            className="webchat-avatar"
-          />
-          <h3>Kowalski IA</h3>
-          <div className="webchat-controls">
-            <button className="minimize-webchat" onClick={toggleWebchat}>
-              _
-            </button>
-            <button className="close-webchat" onClick={toggleWebchat}>
-              ×
-            </button>
-          </div>
-        </div>
         <div className="webchat-content">
           <Webchat />
         </div>

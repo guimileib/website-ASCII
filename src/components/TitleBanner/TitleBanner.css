@@ -1,0 +1,44 @@
+.title-banner {
+    background: linear-gradient(144deg, rgba(6,19,128,1) 0%, rgba(4,10,61,1) 97%);
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+
+    h1 {
+        color: white;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.title-banner-background {
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; 
+    height: 20vw;
+    padding: 25vw 5% 10% 5%;
+    /* TODO: testar responsividade */
+}
+
+.wave-bottom {
+    margin: 0;
+    width: 100vw;
+    bottom: -5px;
+    
+}
+
+@media screen and (max-width: 800px) {
+    .title-banner-background {
+        padding-top: 200px;
+    }
+
+    .banner-image {
+        display: none;
+    }
+
+    .title-banner-background {
+        height: 50%;
+    }
+}

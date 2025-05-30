@@ -1,0 +1,287 @@
+.slider-depoimentos {
+  margin: 0 5%;
+}
+
+.container-depoimentos {
+  background: var(--blue-deep);
+  text-align: center;
+  padding: 90px;
+}
+
+.cabecalho-depoimentos {
+  margin-bottom: 30px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.cabecalho-depoimentos > h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 15px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cabecalho-depoimentos p {
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.card-depoimento {
+  background: var(--blue-light);
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: end;
+  position: relative; /* Permite que elementos filhos sejam posicionados corretamente */
+}
+
+.conteudo-depoimento {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.conteudo-depoimento p {
+  font-size: 16px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+.conteudo-depoimento .aspas {
+  font-size: 14px;
+  color: #ffffff;
+  position: relative;
+  
+}
+
+.aspas {
+  margin-top: 40px;
+}
+
+.conteudo-depoimento .aspas::before {
+  content: "“";
+  font-size: 70px;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+
+.rodape-depoimento {
+  background: white;
+  color: var(--blue-deep);
+  padding: 70px 15px 30px; /* Ajuste para acomodar o avatar */
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Para ficar abaixo do avatar */
+  z-index: 1;
+}
+
+.rodape-depoimento h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue-deep);
+  text-transform: uppercase;
+}
+
+/*Define a cor de fundo do circulo da imagem*/
+.avatar-1 {
+  background: #102e5c;
+}
+
+.avatar-depoimento {
+  width: 80px;
+  height: 80px;
+  background: lightgray;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute; /* Agora ele fica sobreposto */
+  top: -35px; /* Metade para fora do rodapé */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Mantém acima das outras divs */
+}
+
+.avatar-depoimento img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botões de navegação */
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgba(255, 255, 255, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--blue-deep);
+}
+
+.swiper-button-prev {
+  left: 1%; /* Ajuste a posição para fora do container */
+}
+
+.swiper-button-next {
+  right: 1%; /* Ajuste a posição para fora do container */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Botão*/
+.whatsapp-button {
+  background-color: var(--green); /* Verde semelhante ao do botão */
+  color: #0a0a3d; /* Cor do texto */
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 48px;
+}
+
+.whatsapp-button:hover {
+  background-color: #5bb74d;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  .slider-depoimentos {
+    margin: 0 3%;
+  }
+
+  .container-depoimentos {
+    padding: 60px;
+  }
+
+  .cabecalho-depoimentos > h2 {
+    font-size: 28px;
+  }
+
+  .cabecalho-depoimentos p {
+    font-size: 14px;
+  }
+
+  .card-depoimento {
+    height: 350px;
+  }
+
+  .conteudo-depoimento p {
+    font-size: 18px;
+  }
+
+  .conteudo-depoimento .aspas {
+    font-size: 14px;
+  }
+
+  .rodape-depoimento h4 {
+    font-size: 18px;
+  }
+
+  .avatar-depoimento {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+  }
+
+  .swiper-button-prev {
+    left: -1%; /* Ajuste a posição para fora do container */
+  }
+  
+  .swiper-button-next {
+    right: -1%; /* Ajuste a posição para fora do container */
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cabecalho-depoimentos > h2 {
+    font-size: 24px;
+  }
+
+  .conteudo-depoimento p {
+    font-size: 18px;
+    padding: 0px 40px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .conteudo-depoimento .aspas {
+    font-size: 14px;
+  }
+
+  .rodape-depoimento h4 {
+    font-size: 16px;
+  }
+
+  .avatar-depoimento {
+    width: 60px;
+    height: 60px;
+    top: -25px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container-depoimentos {
+    padding: 40px;
+  }
+
+  .conteudo-depoimento {
+    padding: 0px 30px;
+    height: 500px;
+  }
+  
+  .conteudo-depoimento .aspas  {
+    font-size: 12px;
+    padding: 0px;
+  }
+
+  .aspas {
+    margin: 0px;
+  }
+
+  .swiper-button-next {
+    right: -5%; 
+  }
+
+  .swiper-button-prev {
+    left: -5%; 
+  }
+
+  
+}

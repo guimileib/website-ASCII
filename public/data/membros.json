@@ -1,0 +1,154 @@
+[
+  {
+    "nome": "Daniel Gentil",
+    "curso": "Ciência da Computação",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/daniel-gentil.jpg",
+    "linkedin": "https://www.linkedin.com/in/daniel-gentil-861585249/"
+  },
+  {
+    "nome": "Herbert Tolentino",
+    "curso": "Sistemas de Informação",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/herbert-tolentino.jpg",
+    "linkedin": "https://www.linkedin.com/in/herbert-tolentino"
+  },
+  {
+    "nome": "Ilton Batista Silva",
+    "curso": "Sistemas de Informação",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "projetos",
+    "foto": "../membros/fotos/ilton-silva.jpg",
+    "linkedin": "https://www.linkedin.com/in/iltonbsilva/"
+  },
+  {
+    "nome": "Marcus Arthur",
+    "curso": "Sistemas de Informação",
+    "cargo": "Diretor",
+    "diretoria": "gestao-pessoas",
+    "foto": "../membros/fotos/marcus-arthur.jpg",
+    "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
+  },
+  {
+    "nome": "Marcus Arthur",
+    "curso": "Sistemas de Informação",
+    "cargo": "Vice-presidente",
+    "diretoria": "presidencia",
+    "foto": "../membros/fotos/marcus-arthur.jpg",
+    "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
+  },
+  {
+    "nome": "Katarine Rodrigues",
+    "curso": "Sistemas de Informação",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "adm-financeiro",
+    "foto": "../membros/fotos/katarine-almeida.jpg",
+    "linkedin": "https://www.linkedin.com/in/katarine-rodrigues-almeida/"
+  },
+  {
+    "nome": "Kauan Rodrigues",
+    "curso": "Sistemas de Informação",
+    "cargo": "Diretor",
+    "diretoria": "projetos",
+    "foto": "../membros/fotos/kauan-barros.jpg",
+    "linkedin": "https://www.linkedin.com/in/kaurodri"
+  },
+  {
+    "nome": "Kristen Pavarinie",
+    "curso": "Ciência da Computação",
+    "cargo": "Diretor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/kristen-pereira.jpg",
+    "linkedin": "https://www.linkedin.com/in/kristen-pavarine-7b6a14328/"
+  },
+  {
+    "nome": "Leonardo Andrade",
+    "curso": "Ciência da Computação",
+    "cargo": "Diretor",
+    "diretoria": "adm-financeiro",
+    "foto": "../membros/fotos/leonardo-andrade.jpg",
+    "linkedin": "https://www.linkedin.com/in/leonardo-alfaro-895142346/"
+  },
+  {
+    "nome": "Lucas Araújo",
+    "curso": "Sistemas de Informação",
+    "cargo": "Gerente e Desenvolvedor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/lucas-araujo.jpg",
+    "linkedin": "https://www.linkedin.com/in/lucasara%C3%BAjodeoliveira/"
+  },
+  {
+    "nome": "Malcon Rezende",
+    "curso": "Ciência da Computação",
+    "cargo": "Gerente e Desenvolvedor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/malcon-rezende.jpg",
+    "linkedin": "https://www.linkedin.com/in/malcon-rezende/"
+  },
+  {
+    "nome": "Murilo Beppler",
+    "curso": "Ciência da Computação",
+    "cargo": "Presidente",
+    "diretoria": "presidencia",
+    "foto": "../membros/fotos/murilo-beppler.jpg",
+    "linkedin": "https://www.linkedin.com/in/murilobeppler/"
+  },
+  {
+    "nome": "Raquel Emillene",
+    "curso": "Ciência da Computação",
+    "cargo": "Assessor e Desenvolvedor",
+    "diretoria": "marketing",
+    "foto": "../membros/fotos/raquel-thome.jpg",
+    "linkedin": "https://www.linkedin.com/in/raquel-freire-a2a578325/"
+  },
+  {
+    "nome": "Whebert Batista",
+    "curso": "Ciência da Computação",
+    "cargo": "Gerente de inovação",
+    "diretoria": "projetos",
+    "foto": "../membros/fotos/whebert-batista.jpg",
+    "linkedin": "https://www.linkedin.com/in/whebert-batista-do-nascimento-56692a244/"
+  },
+    {
+        "nome":"Kristen Pavarinie",
+        "curso":"Sistemas de Informação",
+        "cargo":"Diretor de Comercial/Marketing", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/kristen-pereira.jpg",
+        "linkedin":"https://www.linkedin.com/in/kristen-pavarine-7b6a14328/"
+    },
+    {
+        "nome":"Murilo Beppler",
+        "curso":"Ciência da Computação",
+        "cargo":"Presidente", 
+        "diretoria": "diretor",
+        "foto":"../membros/fotos/murilo-beppler.jpg",
+        "linkedin":"https://www.linkedin.com/in/murilobeppler/"
+    },
+    {
+      "nome": "Kauan Rodrigues",
+      "curso": "Sistemas de Informação",
+      "cargo": "Diretor de Projetos",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/kauan-barros.jpg",
+      "linkedin": "https://www.linkedin.com/in/kaurodri"
+    },
+    {
+      "nome": "Leonardo Andrade",
+      "curso": "Ciência da Computação",
+      "cargo": "Diretor de Adm/Financeiro",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/leonardo-andrade.jpg",
+      "linkedin": "https://www.linkedin.com/in/leonardo-alfaro-895142346/"
+    },
+    {
+      "nome": "Marcus Arthur",
+      "curso": "Sistemas de Informação",
+      "cargo": "Diretor de Gestão de Pessoas",
+      "diretoria": "diretor",
+      "foto": "../membros/fotos/marcus-arthur.jpg",
+      "linkedin": "https://www.linkedin.com/in/marcus-luz-4670b221b/"
+    }
+]

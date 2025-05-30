@@ -1,0 +1,149 @@
+/* Hide webchat header */
+.webchat-header,
+.bpw-header-container,
+.bpw-header,
+.bpw-layout header {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  overflow: hidden !important;
+}
+
+/* Fix content positioning */
+.webchat-content,
+.bpw-conversation-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: 100% !important;
+}
+
+/* Hide specific title elements */
+.webchat-header h3 {
+  display: none !important;
+}
+
+/* Adjust container margins to compensate for removed header */
+.bp-widget-web {
+  margin-top: 0 !important;
+}
+
+/* Estilo para o cabeçalho principal do Botpress */
+.bpReset.bpHeaderContainer,
+.bpReset.bpw-layout header,
+.bpw-header-container,
+header.bpw-header,
+.bpw-layout header,
+.bp-widget-web header,
+div[class*="header"],
+.bpw-floating-header {
+  background-color: #002500 !important;
+  border-bottom: 1px solid #00FF00 !important;
+  color: #00FF00 !important;
+  padding: 10px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 50px !important;
+}
+
+/* Estilo para o conteúdo do cabeçalho */
+.bpw-header-title-container,
+.bpw-header-title-flexbox,
+.bpw-header-name,
+div[class*="header-name"],
+div[class*="header-title"] {
+  color: #00FF00 !important;
+  font-family: 'Courier New', monospace !important;
+  text-align: left !important;
+  margin-left: 10px !important;
+}
+
+/* Estilo para o título do bot */
+.bpw-header-title,
+.bpw-header-name,
+div[class*="title"] {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  color: #00FF00 !important;
+}
+
+/* Estilo para o subtítulo do bot */
+.bpw-header-subtitle,
+div[class*="subtitle"] {
+  font-size: 14px !important;
+  margin: 0 !important;
+  color: #00FF00 !important;
+  opacity: 0.8 !important;
+}
+
+/* Estilo para o avatar do bot */
+.bpw-header-icon,
+.bpw-header-avatar,
+img[class*="avatar"],
+img[class*="icon"] {
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Estilo para os botões do cabeçalho (minimizar, fechar) */
+.bpw-header-button,
+button[class*="header-button"] {
+  background: transparent !important;
+  border: none !important;
+  color: #00FF00 !important;
+  cursor: pointer !important;
+  padding: 5px !important;
+  margin-left: 5px !important;
+}
+
+/* Ajustar o container de botões para alinhar à direita */
+.bpw-header-buttons,
+div[class*="header-buttons"] {
+  display: flex !important;
+  margin-left: auto !important;
+}
+
+/* Estilo para forçar o alinhamento correto do layout do cabeçalho */
+.bpw-header-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Ajustar o conteúdo da conversa para compensar o cabeçalho */
+.bpw-chat-container {
+  height: calc(100% - 50px) !important;
+}
+
+/* Adicionar overflow para garantir que o conteúdo seja visível */
+.bpw-layout {
+  overflow: hidden !important;
+}
+
+/* Style for the input field */
+.bpw-composer textarea,
+div[class*="bpComposer"] textarea,
+div[class*="bpComposer"] input,
+.bpw-composer-inner,
+div[class*="composer-inner"],
+.bpw-composer-container,
+div[class*="composer-container"] {
+  background-color: #111111 !important;
+  color: #00FF00 !important;
+  border: none !important; /* Remove green border */
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 8px 12px !important; /* Add padding for text */
+} 

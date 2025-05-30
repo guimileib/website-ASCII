@@ -1,3 +1,32 @@
+:root {
+  /* Cores de interação */
+  --interactive-primary: #00ff00;
+  --interactive-border: rgba(0, 255, 0, 0.5);
+  --interactive-shadow: rgba(0, 255, 0, 0.3);
+  --interactive-glow: #39ff14;
+  
+  /* Cores de fundo */
+  --backdrop-primary: rgba(0, 0, 0, 0.8);
+  --surface-primary: rgba(17, 17, 17, 0.9);
+  --surface-secondary: rgba(8, 8, 8, 0.5);
+  --chat-bot-surface: rgba(0, 37, 0, 0.8);
+  --chat-user-surface: rgba(0, 69, 0, 0.8);
+  
+  /* Cores de texto */
+  --text-primary: #ffffff;
+  --text-highlight: #00ff00;
+  --text-muted: #697569;
+  
+  /* Efeitos visuais */
+  --blur-strength: 10px;
+  
+  /* Dimensões de interação */
+  --action-button-size: 32px;
+  --action-icon-size: 1.7rem;
+  --action-border-radius: 5px;
+  --action-border-width: 1.2px;
+}
+
 .kowalski-webchat-container {
   position: fixed;
   top: 50%;
@@ -8,14 +37,16 @@
   height: 75vh;
   max-height: 800px;
   z-index: 1000;
-  background-color: var(--gray-dark);
+  background: rgba(17, 17, 17, 0.3);
   border-radius: 12px;
-  border: 2px solid var(--primary-color);
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  border: 2px solid var(--interactive-border);
+  box-shadow: 0 0 30px var(--interactive-shadow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   animation: chat-appear 0.3s ease-out;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 @keyframes chat-appear {
@@ -27,62 +58,6 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
-}
-
-.webchat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: #041f0d;
-  border-bottom: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.webchat-header h3 {
-  margin: 0;
-  color: var(--primary-color);
-  font-size: 1.3rem;
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-}
-
-.webchat-avatar {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  margin-right: 12px;
-  border: 2px solid var(--primary-color);
-  background-color: #000;
-  box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
-}
-
-.webchat-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.close-webchat, .minimize-webchat {
-  background: none;
-  border: none;
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
-  outline: none;
-}
-
-.close-webchat:hover, .minimize-webchat:hover {
-  background-color: rgba(0, 255, 0, 0.2);
-  transform: scale(1.1);
-}
-
-.close-webchat:active, .minimize-webchat:active {
-  transform: scale(0.95);
 }
 
 .webchat-content {
@@ -107,20 +82,195 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--backdrop-primary);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
   z-index: 999;
   animation: fade-in 0.3s ease;
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Custom styles for bots message bubbles */
+/* Custom styling for the chat interface */
 :root {
-  --chat-bubble-color: var(--primary-color) !important;
-  --composer-border-color: var(--primary-color) !important;
+  --chat-bubble-color: var(--interactive-primary) !important;
+  --composer-border-color: var(--interactive-primary) !important;
+}
+
+/* Custom styles for the chat interface */
+/* Substituir os avatares das bolhas de mensagem por imagens de pinguim */
+.bpMessageAvatarFallback {
+  background-image: url("/kowalski.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: transparent !important; /* Oculta a letra dentro */
+  font-size: 0 !important; /* Garante que o texto não apareça */
+  background-color: var(--surface-secondary) !important;
+}
+
+/* Ocultar o "K" e substituir por uma imagem de pinguim */
+.bpHeaderContentAvatarFallback {
+  background-image: url("/kowalski.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: transparent !important; /* Oculta a letra K */
+  font-size: 0 !important; /* Garante que o texto não apareça */
+  width: 32px !important;
+  height: 32px !important;
+  margin-right: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-secondary) !important;
+}
+
+/* Remover o "B" e o círculo verde no meio do chat */
+.bpMessageListConversationStart,
+.bpMessageListConversationStartContainer,
+[class*="bpMessageListConversationStart"],
+[class*="ConversationStart"] {
+  display: none !important;
+}
+
+/* Remover avatar circular (verde ou qualquer outro) no meio do chat */
+.bpMessageListConversationStartAvatar,
+[class*="ConversationStartAvatar"] {
+  display: none !important;
+}
+
+/* Remover o texto "Kowalski IA" */
+.bpMessageListMarqueeTitle {
+  display: none !important;
+}
+
+/* Estilo para o cabeçalho - aparência semelhante à imagem de referência */
+.bpReset.bpHeaderContainer,
+[class*="bpHeaderContainer"],
+.bpw-header-container,
+header.bpw-header,
+.bpw-layout header,
+.bp-widget-web header,
+div[class*="header"],
+.bpw-floating-header {
+  background: rgba(0, 255, 0, 0.15) !important;
+  color: var(--interactive-primary) !important;
+  border: 2px solid var(--interactive-border) !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.2) !important;
+  padding: 10px 15px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Estilo para o fundo do chat */
+.bpw-layout,
+div[class*="bpMessageList"],
+div[class*="MessageList"],
+.bp-widget-web,
+div[class*="bpContainer"] {
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+  border: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+}
+
+/* Estilo para a caixa de entrada de texto - remover borda dupla */
+:global(.bpw-composer textarea),
+:global(div[class*="bpComposer"] textarea),
+:global(div[class*="bpComposer"] input),
+:global(.bpw-composer-inner),
+:global(div[class*="composer-inner"]),
+:global(.bpw-composer-container),
+:global(div[class*="composer-container"]) {
+  background-color: var(--surface-color) !important;
+  color: var(--main-color) !important;
+  border: none !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 8px 12px !important;
+}
+
+/* Remover retângulo externo ou interno */
+.bpw-composer,
+div[class*="bpComposer"],
+.bpw-composer-outer,
+div[class*="composer-outer"] {
+  background-color: #111111 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Estilo para a área da mensagem/input */
+.bpw-composer,
+div[class*="bpComposer"],
+.bpw-send-button,
+button[class*="sendButton"] {
+  background-color: #111111 !important;
+  border-top: 1px solid var(--border-color) !important;
+  color: var(--main-color) !important;
+}
+
+/* Estilo para mensagens do bot */
+.kowalski-webchat-container .bpw-from-bot .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromBot"] div[class*="bubble"],
+.kowalski-webchat-container .bpw-from-user .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromUser"] div[class*="bubble"] {
+  background: var(--chat-bot-surface) !important;
+  color: var(--interactive-primary) !important;
+  border: 1.5px solid var(--interactive-glow) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 2px #39ff14, 0 0 6px #39ff14 !important;
+  backdrop-filter: none !important;
+}
+
+/* Estilo para a data/timestamp */
+.bpw-date-container,
+div[class*="dateContainer"],
+.bpw-timestamp,
+div[class*="timestamp"] {
+  color: var(--background-color) !important;
+  opacity: 0.7 !important;
+}
+
+/* Remover o logo do Botpress */
+.bpw-powered,
+div[class*="powered"],
+[class*="botpress"],
+.bpw-powered-by,
+[class*="PoweredBy"],
+.bp-powered,
+footer,
+.bpw-powered-container {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
 }
 
 /* Media queries for responsive design */
@@ -129,9 +279,9 @@
     width: 90%;
     height: 85vh;
   }
-} 
+}
 
-.card-image{
+.card-image {
   width: 150px;
   height: 150px;
   display: flex;
@@ -147,4 +297,378 @@
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* Estilo para o botão de atualização/fechar no cabeçalho */
+.bpw-header-button,
+.bpw-header-icon,
+button[class*="header-button"],
+[class*="bpHeaderAction"],
+[class*="bpHeaderButton"] {
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin-left: 5px !important;
+  cursor: pointer !important;
+}
+
+.bpw-header-button:hover,
+.bpw-header-icon:hover,
+button[class*="header-button"]:hover,
+[class*="bpHeaderAction"]:hover,
+[class*="bpHeaderButton"]:hover {
+  background-color: var(--main-color) !important;
+  color: var(--background-color) !important;
+}
+
+/* Estilo para os textos do cabeçalho */
+.bpw-header-name,
+.bpw-header-subtitle,
+[class*="bpHeaderTitle"],
+[class*="bpHeaderSubtitle"] {
+  color: var(--main-color) !important;
+  font-family: "Courier New", monospace !important;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
+  letter-spacing: 0.5px !important;
+}
+
+.bpw-header-name,
+[class*="bpHeaderTitle"] {
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.bpHeaderContentContainer {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100%;
+  justify-content: space-between !important;
+}
+
+.bpHeaderContentContainer > :first-child {
+  justify-self: start;
+}
+
+.bpHeaderContentContainer > :nth-child(2) {
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.bpHeaderContentContainer > :last-child {
+  justify-self: end;
+}
+
+.bpHeaderContentTitle {
+  margin-bottom: 0px !important;
+}
+
+.bpHeaderContentActions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+}
+
+.bpHeaderContentActionsIcons {
+  color: var(--main-color) !important;
+  background: transparent !important;
+  border: var(--action-border-width) solid var(--main-color) !important;
+  border-radius: var(--action-border-radius) !important;
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  transition: background 0.2s, color 0.2s, border 0.2s !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+.bpHeaderContentActionsIcons[role="button"]:not(svg) {
+  font-size: var(--action-icon-size) !important;
+}
+
+.bpHeaderContentActionsIcons svg,
+.bpHeaderContentActionsIcons {
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
+  min-width: var(--action-button-size) !important;
+  min-height: var(--action-button-size) !important;
+  max-width: var(--action-button-size) !important;
+  max-height: var(--action-button-size) !important;
+}
+
+.bpHeaderContentActionsIcons:hover {
+  background: var(--interactive-primary) !important;
+  color: var(--surface-primary) !important;
+  border: var(--action-border-width) solid var(--interactive-glow) !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+}
+
+.bpHeaderContentActionsIcons * {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  font-size: 1.2rem !important;
+  line-height: 1 !important;
+  box-sizing: content-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.bpHeaderContentActionsIcons svg[width],
+.bpHeaderContentActionsIcons svg[height] {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.bpHeaderContentCloseButton {
+  position: relative !important;
+  background: transparent !important;
+  color: var(--main-color) !important;
+  border: var(--action-border-width) solid var(--main-color) !important;
+  border-radius: var(--action-border-radius) !important;
+  font-size: var(--action-icon-size) !important;
+  width: var(--action-button-size) !important;
+  height: var(--action-button-size) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  transition: background 0.2s, color 0.2s, border 0.2s !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+.bpHeaderContentCloseButton:hover {
+  background: var(--interactive-primary) !important;
+  color: var(--surface-primary) !important;
+  border: var(--action-border-width) solid var(--interactive-glow) !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+}
+
+.bpMessageContainer[data-direction="system"] {
+  color: var(--tertiary-text) !important;
+}
+
+.bpComposerInput {
+  color: var(--tertiary-text) !important;
+}
+
+.kowalski-webchat-container .bpMessageBlocksBubble {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  background: var(--chat-bot-surface) !important;
+  color: var(--interactive-primary) !important;
+  border: 1.5px solid var(--interactive-glow) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 2px #39ff14, 0 0 6px #39ff14 !important;
+  backdrop-filter: none !important;
+}
+
+.kowalski-webchat-container .bpMessageListMarqueeContainer {
+  display: none !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer {
+  background: rgba(0, 255, 0, 0.15) !important;
+  color: var(--interactive-primary) !important;
+  border: 2px solid var(--interactive-border) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.2) !important;
+  padding: 10px 15px !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "Courier New", monospace !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer textarea,
+.kowalski-webchat-container .bpComposerContainer input {
+  background: transparent !important;
+  color: var(--main-color) !important;
+  border: none !important;
+  font-family: "Courier New", monospace !important;
+  font-size: 1rem !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.kowalski-webchat-container .bpComposerContainer textarea::placeholder,
+.kowalski-webchat-container .bpComposerContainer input::placeholder {
+  color: var(--main-color) !important;
+  opacity: 1 !important;
+}
+
+.bpModalDialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1999;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: opacity 0.2s;
+}
+
+.bpModalDialogContainer {
+  background: rgba(10, 30, 10, 0.97) !important;
+  color: #00ff00 !important;
+  border: 1.5px solid #00ff00 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.7), 0 0 12px #00ff0055;
+  padding: 28px 32px 20px 32px !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  z-index: 2000 !important;
+  position: relative;
+  min-width: 320px;
+  max-width: 95vw;
+  transition: box-shadow 0.2s, background 0.2s;
+  text-align: center;
+}
+
+.bpModalDialogTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.bpModalDialogTitleText {
+  color: #00ff00 !important;
+  font-size: 1.6rem !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.bpModalDialogTitleCloseIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent !important;
+  color: #00ff00 !important;
+  border: 1.2px solid #00ff00 !important;
+  border-radius: 5px !important;
+  font-size: 1.1rem !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  z-index: 2;
+  padding: 0 !important;
+}
+
+.bpModalDialogTitleCloseIcon:hover {
+  background: #00ff00 !important;
+  color: #111 !important;
+  border-color: #00ff00 !important;
+}
+
+.bpModalDialogContainer p,
+.bpModalDialogContainer label,
+.bpModalDialogContainer span {
+  color: #00ff00 !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.bpModalDialogContainer button,
+.bpModalDialogContainer .bpModalButton {
+  background: rgba(0, 255, 0, 0.1) !important;
+  color: #00ff00 !important;
+  border: 1.5px solid #00ff00 !important;
+  border-radius: 6px !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  padding: 7px 18px !important;
+  margin: 16px 8px 0 8px !important;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  display: inline-block;
+}
+
+.bpModalDialogContainer button:hover,
+.bpModalDialogContainer .bpModalButton:hover {
+  background: #00ff00 !important;
+  color: #111 !important;
+  border-color: #00ff00 !important;
+}
+
+/* Esconde o botão externo se houver um filho com a classe do ícone */
+.bpModalDialogContainer button:has(.bpModalDialogTitleCloseIcon) {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Faz o ícone ocupar toda a área do botão */
+.bpModalDialogContainer button .bpModalDialogTitleCloseIcon {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: 1.2px solid #00ff00 !important;
+  border-radius: 5px !important;
+  color: #00ff00 !important;
+  font-size: 1.1rem !important;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 !important;
+}
+
+.bpModalDialogContent {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.bpModalDialogNewConversationButton {
+  margin-top: 28px !important;
+  margin-bottom: 0 !important;
+  align-self: center !important;
+}
+
+.bpModalDialogContainer button:hover .bpModalDialogTitleCloseIcon,
+.bpModalDialogTitleCloseIcon:hover {
+  background: #00ff00 !important;
+  color: #111 !important;
+  border-color: #00ff00 !important;
 }

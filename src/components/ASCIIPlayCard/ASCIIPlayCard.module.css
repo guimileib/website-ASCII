@@ -1,0 +1,182 @@
+.card {
+  background: linear-gradient(
+    180deg,
+    #297fdb 0%,
+    #16448c 28%,
+    #0e2967 57%,
+    #040a3d 80%,
+    #040a3d 97%
+  );
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  padding: 0.1rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.podcast {
+  background-color: #84cc16;
+  color: #040A3D;
+}
+
+.video {
+  background-color: #D31212;
+}
+
+.date {
+  color: #297FDB;
+}
+
+.textContainer {
+  display: flex;
+  text-align: left !important;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.summary {
+  font-size: 1rem;
+  color: #297FDB;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+}
+
+.videoIcon {
+  background-color: #D31212;
+  color: white;
+  cursor: pointer;
+}
+
+.videoIcon:hover {
+  background-color: #9d0c0c;
+}
+
+.podcastIcon {
+  background-color: #84cc16;
+  color: black;
+  cursor: pointer;
+}
+
+.podcastIcon:hover {
+  background-color: #649a14;
+}
+
+.duration {
+  background-color: #a3e635;
+  color: black;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content com bordas arredondadas */
+.modalContent {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  inset: auto;
+  outline: none;
+}
+
+/* Container do vídeo com bordas arredondadas */
+.youtubeContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.youtubeIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Botão de fechar */
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: -5px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.closeButton:hover {
+  color: #ccc;
+}

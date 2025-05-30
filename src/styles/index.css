@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #00FF00;
-  --primary-dark: #00CC00;
+  --primary-color: #00ff00;
+  --primary-dark: #00cc00;
   --bg-color: #000000;
-  --text-color: #FFFFFF;
+  --text-color: #ffffff;
   --gray-dark: #111111;
   --gray: #333333;
 }
@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--bg-color);
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(120deg, #0a0a0a 0%, #003300 100%);
   color: var(--text-color);
   line-height: 1.6;
 }
