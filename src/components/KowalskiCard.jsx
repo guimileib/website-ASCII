@@ -16,7 +16,11 @@ const KowalskiCard = () => {
   const configuration = {
     color: "#00FF00",
     botName: "",
+<<<<<<< HEAD
     botConversationDescription: "Assistente ASCII",
+=======
+    botConversationDescription: "Assistente da ASCII Empresa Junior",
+>>>>>>> cb2f976 (Old package folders)
     useSessionStorage: true,
     messagingUrl: "https://messaging.botpress.cloud",
     composerPlaceholder: "Fale com o assistente...",
