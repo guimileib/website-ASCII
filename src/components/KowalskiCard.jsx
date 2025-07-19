@@ -13,14 +13,11 @@ const KowalskiCard = () => {
     clientId,
   });
 
+  
   const configuration = {
     color: "#00FF00",
     botName: "",
-<<<<<<< HEAD
-    botConversationDescription: "Assistente ASCII",
-=======
     botConversationDescription: "Assistente da ASCII Empresa Junior",
->>>>>>> cb2f976 (Old package folders)
     useSessionStorage: true,
     messagingUrl: "https://messaging.botpress.cloud",
     composerPlaceholder: "Fale com o assistente...",
@@ -36,14 +33,14 @@ const KowalskiCard = () => {
     // Toggle body scroll when chat is open/closed
     if (!isWebchatOpen) {
       document.body.style.overflow = "hidden";
-      
+
       // Remover cabeçalhos manualmente após um breve delay
       setTimeout(() => {
         const headers = document.querySelectorAll('.webchat-header, .bpw-header-container, .bpw-header, .bpw-layout header');
         headers.forEach(header => {
           if (header) header.style.display = 'none';
         });
-        
+
         // Também substituir o avatar fallback "K" por uma imagem de pinguim
         const avatarFallbacks = document.querySelectorAll('.bpHeaderContentAvatarFallback');
         avatarFallbacks.forEach(avatar => {
@@ -54,7 +51,7 @@ const KowalskiCard = () => {
           avatar.style.fontSize = '0';
           avatar.textContent = ''; // Remover o conteúdo de texto (a letra K)
         });
-        
+
         // Substituir os avatares das bolhas de mensagem por imagens de pinguim
         const messageAvatars = document.querySelectorAll('.bpMessageAvatarFallback');
         messageAvatars.forEach(avatar => {
@@ -65,7 +62,7 @@ const KowalskiCard = () => {
           avatar.style.fontSize = '0';
           avatar.textContent = ''; // Remover o conteúdo de texto
         });
-        
+
         // Remover o "B" e o círculo verde no meio do chat
         const conversationStartElements = document.querySelectorAll(
           '.bpMessageListConversationStart, ' +
@@ -78,7 +75,7 @@ const KowalskiCard = () => {
         conversationStartElements.forEach(element => {
           if (element) element.style.display = 'none';
         });
-        
+
         // Remover o "⚡ by Botpress" do rodapé
         const botpressElements = document.querySelectorAll(
           '.bpw-powered, ' +
@@ -102,7 +99,7 @@ const KowalskiCard = () => {
             element.remove(); // Tenta remover completamente o elemento
           }
         });
-        
+
         // Também remover qualquer elemento com a classe bpMessageListMarqueeTitle
         const kowalskiTitles = document.querySelectorAll('.bpMessageListMarqueeTitle');
         kowalskiTitles.forEach(title => {
