@@ -8,7 +8,7 @@ const Footer = () => {
       
       <div className="footer-content">
         <div className="footer-section">
-          <img src="/images/logo_experiment.png" alt="ASCII Logo" className="footer-logo" />
+          <img src="/logo_experiment.png" alt="ASCII Logo" className="footer-logo" />
           <p className="footer-tagline">Transformando ideias em código</p>
         </div>
         
