@@ -51,7 +51,7 @@ const Experimentos = () => {
           <div className="earth-container">
             <img 
               ref={earthRef} 
-              src="./images/mundi.png" 
+              src="/images/mundi.png" 
               alt="Terra em ASCII" 
               className="earth-image" 
             />
