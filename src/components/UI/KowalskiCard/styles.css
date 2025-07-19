@@ -1,3 +1,33 @@
+/* =====================
+   KOWALSKI WEBCHAT CSS
+   ===================== */
+:root {
+  --interactive-primary: #00ff00;
+  --interactive-border: rgba(0, 255, 0, 0.5);
+  --interactive-shadow: rgba(0, 255, 0, 0.3);
+  --interactive-glow: #39ff14;
+  --backdrop-primary: rgba(0, 0, 0, 0.8);
+  --surface-primary: rgba(17, 17, 17, 0.9);
+  --surface-secondary: rgba(8, 8, 8, 0.5);
+  --chat-bot-surface: rgba(0, 37, 0, 0.8);
+  --chat-user-surface: rgba(0, 69, 0, 0.8);
+  --text-primary: #ffffff;
+  --text-highlight: #00ff00;
+  --text-muted: #697569;
+  --blur-strength: 10px;
+  --action-button-size: 32px;
+  --action-icon-size: 1.7rem;
+  --action-border-radius: 5px;
+  --action-border-width: 1.2px;
+  --chat-bubble-color: var(--interactive-primary) !important;
+  --composer-border-color: var(--interactive-primary) !important;
+  --main-color: #00FF00;
+  --background-color: #000000;
+  --border-color: #00FF00;
+  --blur-amount: 8px;
+  --tertiary-text: #697569;
+}
+
 .kowalski-webchat-container {
   position: fixed;
   top: 50%;
@@ -8,14 +38,16 @@
   height: 75vh;
   max-height: 800px;
   z-index: 1000;
-  background-color: var(--gray-dark);
+  background: rgba(17, 17, 17, 0.3);
   border-radius: 12px;
-  border: 2px solid var(--primary-color);
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  border: 2px solid var(--interactive-border);
+  box-shadow: 0 0 30px var(--interactive-shadow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   animation: chat-appear 0.3s ease-out;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 @keyframes chat-appear {
@@ -36,7 +68,6 @@
   height: 100%;
 }
 
-/* Style the actual Botpress webchat component */
 .webchat-content > div {
   height: 100% !important;
   width: 100% !important;
@@ -44,14 +75,15 @@
   overflow: hidden;
 }
 
-/* Add an overlay when chat is open */
 .chat-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--backdrop-primary);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
   z-index: 999;
   animation: fade-in 0.3s ease;
 }
@@ -61,56 +93,51 @@
   to { opacity: 1; }
 }
 
-<<<<<<< HEAD
-
-=======
-/* Custom styling for the chat interface */
->>>>>>> dev
-:root {
-  --chat-bubble-color: var(--primary-color) !important;
-  --composer-border-color: var(--primary-color) !important;
-}
-
-<<<<<<< HEAD
-=======
-/* Substituir os avatares das bolhas de mensagem por imagens de pinguim */
-:global(.bpMessageAvatarFallback) {
-  background-image: url('/kowalski.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  color: transparent !important; /* Oculta a letra dentro */
-  font-size: 0 !important; /* Garante que o texto não apareça */
-}
-
-/* Ocultar o "K" e substituir por uma imagem de pinguim */
+/* Avatar fallback para pinguim */
+.bpMessageAvatarFallback,
+:global(.bpMessageAvatarFallback),
 :global(.bpHeaderContentAvatarFallback) {
   background-image: url('/kowalski.png') !important;
   background-size: cover !important;
   background-position: center !important;
-  color: transparent !important; /* Oculta a letra K */
-  font-size: 0 !important; /* Garante que o texto não apareça */
+  color: transparent !important;
+  font-size: 0 !important;
+  background-color: var(--surface-secondary) !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin-right: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Remover o "B" e o círculo verde no meio do chat */
-:global(.bpMessageListConversationStart), 
+/* Remover elementos do Botpress */
+.bpMessageListConversationStart,
+.bpMessageListConversationStartContainer,
+[class*="bpMessageListConversationStart"],
+[class*="ConversationStart"],
+.bpMessageListConversationStartAvatar,
+[class*="ConversationStartAvatar"],
+.bpMessageListMarqueeTitle,
+:global(.bpMessageListConversationStart),
 :global(.bpMessageListConversationStartContainer),
 :global([class*="bpMessageListConversationStart"]),
-:global([class*="ConversationStart"]) {
-  display: none !important;
-}
-
-/* Remover avatar circular (verde ou qualquer outro) no meio do chat */
+:global([class*="ConversationStart"]),
 :global(.bpMessageListConversationStartAvatar),
-:global([class*="ConversationStartAvatar"]) {
-  display: none !important;
-}
-
-/* Remover o texto "Kowalski IA" */
+:global([class*="ConversationStartAvatar"]),
 :global(.bpMessageListMarqueeTitle) {
   display: none !important;
 }
 
-/* Estilo para o cabeçalho - aparência semelhante à imagem de referência */
+/* Cabeçalho do chat */
+.bpReset.bpHeaderContainer,
+[class*="bpHeaderContainer"],
+.bpw-header-container,
+header.bpw-header,
+.bpw-layout header,
+.bp-widget-web header,
+div[class*="header"],
+.bpw-floating-header,
 :global(.bpReset.bpHeaderContainer),
 :global([class*="bpHeaderContainer"]),
 :global(.bpw-header-container),
@@ -130,24 +157,38 @@
   align-items: center !important;
 }
 
-/* Estilo para o fundo do chat */
+/* Fundo do chat */
+.bpw-layout,
+div[class*="bpMessageList"],
+div[class*="MessageList"],
+.bp-widget-web,
+div[class*="bpContainer"],
 :global(.bpw-layout),
 :global(div[class*="bpMessageList"]),
 :global(div[class*="MessageList"]),
 :global(.bp-widget-web),
 :global(div[class*="bpContainer"]) {
-  background-color: #080808 !important; /* Fundo escuro que combina com o site */
+  background-color: #080808 !important;
   color: #00FF00 !important;
   border: 1px solid #00FF00 !important;
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
-/* Estilo para a caixa de entrada de texto - remover borda dupla */
-:global(.bpw-composer-inner), 
-:global(div[class*="composer-inner"]), 
-:global(.bpw-composer-container), 
-:global(div[class*="composer-container"]), 
-:global(.bpw-composer textarea), 
-:global(div[class*="bpComposer"] textarea), 
+/* Caixa de entrada de texto */
+.bpw-composer-inner,
+div[class*="composer-inner"],
+.bpw-composer-container,
+div[class*="composer-container"],
+.bpw-composer textarea,
+div[class*="bpComposer"] textarea,
+div[class*="bpComposer"] input,
+:global(.bpw-composer-inner),
+:global(div[class*="composer-inner"]),
+:global(.bpw-composer-container),
+:global(div[class*="composer-container"]),
+:global(.bpw-composer textarea),
+:global(div[class*="bpComposer"] textarea),
 :global(div[class*="bpComposer"] input) {
   background-color: #111111 !important;
   color: #00FF00 !important;
@@ -155,16 +196,13 @@
   border-radius: 5px !important;
   box-shadow: none !important;
   outline: none !important;
-}
-
-/* Add some padding to ensure the text doesn't appear too close to the edge */
-:global(.bpw-composer textarea), 
-:global(div[class*="bpComposer"] textarea), 
-:global(div[class*="bpComposer"] input) {
   padding: 8px 12px !important;
 }
 
-/* Remover retângulo externo ou interno */
+.bpw-composer,
+div[class*="bpComposer"],
+.bpw-composer-outer,
+div[class*="composer-outer"],
 :global(.bpw-composer),
 :global(div[class*="bpComposer"]),
 :global(.bpw-composer-outer),
@@ -177,7 +215,10 @@
   margin: 0 !important;
 }
 
-/* Estilo para a área da mensagem/input */
+.bpw-composer,
+div[class*="bpComposer"],
+.bpw-send-button,
+button[class*="sendButton"],
 :global(.bpw-composer),
 :global(div[class*="bpComposer"]),
 :global(.bpw-send-button),
@@ -187,23 +228,45 @@
   color: #00FF00 !important;
 }
 
-/* Estilo para mensagens do bot */
+/* Mensagens do bot */
+.kowalski-webchat-container .bpw-from-bot .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromBot"] div[class*="bubble"],
 :global(.bpw-from-bot .bpw-chat-bubble),
 :global(div[class*="fromBot"] div[class*="bubble"]) {
   background-color: #002500 !important;
   color: #00FF00 !important;
   border: 1px solid #00FF00 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 0 0 2px #39ff14, 0 0 6px #39ff14 !important;
+  backdrop-filter: none !important;
 }
 
-/* Estilo para mensagens do usuário */
+/* Mensagens do usuário */
+.kowalski-webchat-container .bpw-from-user .bpw-chat-bubble,
+.kowalski-webchat-container div[class*="fromUser"] div[class*="bubble"],
 :global(.bpw-from-user .bpw-chat-bubble),
 :global(div[class*="fromUser"] div[class*="bubble"]) {
   background-color: #004500 !important;
   color: #FFFFFF !important;
   border: 1px solid #00FF00 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 8px var(--interactive-glow) !important;
+  font-family: "Fira Mono", "Courier New", monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
-/* Estilo para a data/timestamp */
+/* Timestamp */
+.bpw-date-container,
+div[class*="dateContainer"],
+.bpw-timestamp,
+div[class*="timestamp"],
 :global(.bpw-date-container),
 :global(div[class*="dateContainer"]),
 :global(.bpw-timestamp),
@@ -212,7 +275,15 @@
   opacity: 0.7 !important;
 }
 
-/* Remover o logo do Botpress */
+/* Remover logo Botpress */
+.bpw-powered,
+div[class*="powered"],
+[class*="botpress"],
+.bpw-powered-by,
+[class*="PoweredBy"],
+.bp-powered,
+footer,
+.bpw-powered-container,
 :global(.bpw-powered),
 :global(div[class*="powered"]),
 :global([class*="botpress"]),
@@ -231,7 +302,6 @@
   position: absolute !important;
   overflow: hidden !important;
 }
->>>>>>> dev
 
 @media (max-width: 768px) {
   .kowalski-webchat-container {
@@ -240,23 +310,36 @@
   }
 }
 
-<<<<<<< HEAD
-.experiment-card .card-image img[alt="Kowalski IA"] {
-=======
+.card-image {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .experiment-card .card-image img[alt="Assistente"] {
->>>>>>> dev
   object-fit: contain;
   padding: 10px;
   background-color: #000;
 }
 
-<<<<<<< HEAD
-.webchat-header .webchat-avatar[alt="Kowalski IA"] {
-  object-fit: contain;
-  background-color: #000;
-  padding: 2px;
-=======
-/* Estilo para o botão de atualização/fechar no cabeçalho */
+/* Botão de fechar/atualizar no cabeçalho */
+.bpw-header-button,
+.bpw-header-icon,
+button[class*="header-button"],
+[class*="bpHeaderAction"],
+[class*="bpHeaderButton"],
 :global(.bpw-header-button),
 :global(.bpw-header-icon),
 :global(button[class*="header-button"]),
@@ -271,6 +354,11 @@
   cursor: pointer !important;
 }
 
+.bpw-header-button:hover,
+.bpw-header-icon:hover,
+button[class*="header-button"]:hover,
+[class*="bpHeaderAction"]:hover,
+[class*="bpHeaderButton"]:hover,
 :global(.bpw-header-button:hover),
 :global(.bpw-header-icon:hover),
 :global(button[class*="header-button"]:hover),
@@ -280,7 +368,10 @@
   color: #000000 !important;
 }
 
-/* Estilo para os textos do cabeçalho */
+.bpw-header-name,
+.bpw-header-subtitle,
+[class*="bpHeaderTitle"],
+[class*="bpHeaderSubtitle"],
 :global(.bpw-header-name),
 :global(.bpw-header-subtitle),
 :global([class*="bpHeaderTitle"]),
@@ -291,13 +382,19 @@
   letter-spacing: 0.5px !important;
 }
 
+.bpw-header-name,
+[class*="bpHeaderTitle"],
 :global(.bpw-header-name),
 :global([class*="bpHeaderTitle"]) {
   font-size: 16px !important;
   font-weight: bold !important;
 }
 
-/* Estilo para o ícone/avatar no cabeçalho */
+.bpw-header-avatar,
+.bpw-header-icon,
+[class*="bpHeaderAvatar"],
+[class*="bpHeaderIcon"],
+.bpHeaderContentAvatar,
 :global(.bpw-header-avatar),
 :global(.bpw-header-icon),
 :global([class*="bpHeaderAvatar"]),
@@ -313,5 +410,4 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
->>>>>>> dev
 } 
